@@ -13,7 +13,7 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <img
-                src="/images/now-logo.png"
+                src="/images/now-complete-logo.png"
                 alt="NOW - Make it happen"
                 className="h-8 w-auto filter brightness-0 invert"
               />

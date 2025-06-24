@@ -23,7 +23,7 @@ export function Header() {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <img src="/images/now-logo.png" alt="NOW - Make it happen" className="h-10 w-auto" />
+            <img src="/images/now-complete-logo.png" alt="NOW - Make it happen" className="h-10 w-auto" />
           </div>
 
           <nav className="hidden md:flex space-x-8">

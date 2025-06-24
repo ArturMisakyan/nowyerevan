@@ -25,8 +25,8 @@ export function Hero() {
 
               {/* Main logo with multiple effects */}
               <img
-                src="/images/now-logo.png"
-                alt="NOW - Make it happen"
+                src="/images/now-logo-new.png"
+                alt="NOW Logo"
                 className="h-24 md:h-40 w-auto drop-shadow-2xl animate-logo-spectacular relative z-10"
               />
 
