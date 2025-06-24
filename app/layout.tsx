@@ -2,9 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'Custom Outdoor Promo Booths & Expo Stands | NOW',
+  description: 'Stand out with custom-designed outdoor promo booths, ad kiosks, and expo displays. Built for visibility, impact, and brand success.',
 }
 
 export default function RootLayout({
