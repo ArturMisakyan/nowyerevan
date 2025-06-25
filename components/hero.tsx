@@ -24,11 +24,22 @@ export function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-600 rounded-full blur-lg opacity-0 animate-glow-ring scale-125"></div>
 
               {/* Main logo with multiple effects */}
-              <img
-                src="/images/now-logo-new.png"
-                alt="NOW Logo"
-                className="h-24 md:h-40 w-auto drop-shadow-2xl animate-logo-spectacular relative z-10"
-              />
+<div className="relative">
+  {/* Static "now" logo */}
+  <img
+    src="/images/now-logo-new.png"
+    alt="NOW Logo"
+    className="h-24 md:h-40 w-auto drop-shadow-2xl animate-logo-spectacular relative z-10"
+  />
+
+  {/* Animated "make it happen" */}
+  <img
+    src="/images/make.png"
+    alt="Make it happen"
+    className="absolute animate-tagline-fade-in h-6 md:h-10 top-0 right-[-1rem] md:right-[-1.5rem] z-20 opacity-0"
+    style={{ animationDelay: "1.2s", animationFillMode: "forwards" }}
+  />
+</div>
 
               {/* Sparkle effects */}
               <div className="absolute -top-4 -left-4 w-3 h-3 bg-yellow-400 rounded-full animate-sparkle-1"></div>
