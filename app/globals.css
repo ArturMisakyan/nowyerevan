@@ -134,3 +134,8 @@ body {
 .animate-tagline-fade-in {
   animation: tagline-fade-in 1s ease-out forwards;
 }
+
+html {
+  scroll-padding-top: 100px;
+  scroll-behavior: smooth;
+}

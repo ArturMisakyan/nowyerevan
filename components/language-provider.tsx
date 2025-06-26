@@ -54,13 +54,13 @@ const translations = {
     // Portfolio
     portfolioTitle: "Պորտֆոլիո",
     portfolioSubtitle:
-      "Ուսումնասիրեք մեր վերջին նախագծերը և տեսեք, թե ինչպես ենք մենք կյանքի բերում ստեղծագործական տեսլականները",
+      "Մեր վերջին նախագծերը վկայում են մեկ բան՝ եթե կարելի է պատկերացնել, ուրեմն կարելի է իրականացնել",
 
     // Portfolio Items
-    techExpo: "Տեխնոլոգիական Էքսպո Պավիլիոն",
+    techExpo: "Էքսպո Պավիլիոն",
     techExpoCategory: "Էքսպո Պավիլիոններ",
 
-    mallCampaign: "Առևտրային Կենտրոնի Գովազդային Արշավ",
+    mallCampaign: "Արտաքին Գովազդ",
     mallCampaignCategory: "Արտաքին Գովազդ",
 
     corporateEvent: "Կորպորատիվ Միջոցառման Ձևավորում",
@@ -217,13 +217,13 @@ const translations = {
 
     // Portfolio
     portfolioTitle: "Portfolio",
-    portfolioSubtitle: "Explore our latest projects and see how we bring creative visions to life",
+    portfolioSubtitle: "Our latest projects prove one thing: if it can be imagined, it can be made real",
 
     // Portfolio Items
-    techExpo: "Technology Expo Pavilion",
+    techExpo: "Expo Pavilion",
     techExpoCategory: "Expo Pavilions",
 
-    mallCampaign: "Shopping Mall Advertising Campaign",
+    mallCampaign: "Outdoor Advertising",
     mallCampaignCategory: "Outdoor Advertising",
 
     corporateEvent: "Corporate Event Design",
@@ -238,14 +238,8 @@ const translations = {
     brandMaterials: "Brand Advertising Materials",
     brandMaterialsCategory: "Printing Services",
 
-    hotelLobby: "Hotel Lobby Design",
-    hotelLobbyCategory: "Commercial Decor",
-
     festivalStage: "Festival Main Stage",
     festivalStageCategory: "Event Decoration",
-
-    autoShowroom: "Automotive Showroom",
-    autoShowroomCategory: "Expo Pavilions",
 
     // About
     aboutTitle: "About Us",
@@ -378,13 +372,13 @@ const translations = {
 
     // Portfolio
     portfolioTitle: "Портфолио",
-    portfolioSubtitle: "Изучите наши последние проекты и посмотрите, как мы воплощаем творческие идеи в жизнь",
+    portfolioSubtitle: "Наши последние проекты доказывают одно: если можно это представить — значит, можно и реализовать",
 
     // Portfolio Items
-    techExpo: "Технологический Экспо Павильон",
+    techExpo: "Экспо Павильон",
     techExpoCategory: "Экспо Павильоны",
 
-    mallCampaign: "Рекламная Кампания Торгового Центра",
+    mallCampaign: "Наружная реклама",
     mallCampaignCategory: "Наружная Реклама",
 
     corporateEvent: "Дизайн Корпоративного Мероприятия",
