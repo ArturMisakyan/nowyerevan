@@ -108,17 +108,9 @@ export function Hero() {
           <div className="mb-4 md:mb-6 lg:mb-8">
             <h1 className="text-2xl md:text-4xl lg:text-7xl font-bold text-slate-900 mb-3 md:mb-4 lg:mb-6 leading-tight px-2">
               {t("heroTitle")}{" "}
-<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 animated-word">
-  {"Unforgettable".split("").map((char, i) => (
-    <span
-      key={i}
-      className="inline-block animated-letter"
-      style={{ animationDelay: `${i * 0.1}s` }}
-    >
-      {char}
-    </span>
-  ))}
-</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
+                {t("heroTitleHighlight")}
+              </span>
               <br />
               {t("heroTitleEnd")}
             </h1>
@@ -202,28 +194,3 @@ export function Hero() {
     </section>
   )
 }
-<style jsx>{`
-  @keyframes letterDrop {
-    0% {
-      transform: translateY(-100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-  .animated-letter {
-    opacity: 0;
-    transform: translateY(-100%);
-    animation: letterDrop 0.5s ease forwards;
-  }
-`}</style>
-
-
-.animated-letter {
-  opacity: 0;
-  transform: translateY(-100%);
-  animation: letterDrop 0.5s ease forwards;
-}
-
