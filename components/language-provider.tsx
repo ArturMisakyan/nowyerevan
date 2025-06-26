@@ -98,7 +98,7 @@ const translations = {
     // Footer
     footerDescription:
       "NOW - Հայաստանում գովազդային և դեկորատիվ լուծումների առաջատար մատակարար: Make it happen NOW նորարարական դիզայնի և մասնագիտական կատարման միջոցով:",
-    copyright: "© 2025 NOW. Բոլոր իրավունքները պաշտպանված են։ | Կայքը ձևավորված և կառուցված է <strong>NOW Digital</strong> ընկերության կողմից, Հայաստան",
+    copyright: "© 2025 NOW. Բոլոր իրավունքները պաշտպանված են։ | Կայքը ձևավորված և կառուցված է NOW Digital ընկերության կողմից, Հայաստան",
 
     // Additional missing translations
     premiumQuality: "Պրեմիում որակ",
@@ -254,7 +254,7 @@ const translations = {
     // Footer
     footerDescription:
       "NOW - Leading provider of advertising and decorative solutions in Armenia. Make it happen NOW through innovative design and professional execution.",
-    copyright: "© 2025 NOW. All rights reserved. | Designed and built by <strong>NOW Digital</strong>, Armenia",
+    copyright: "© 2025 NOW. All rights reserved. | Designed and built by NOW Digital, Armenia",
 
     // Additional translations
     premiumQuality: "Premium Quality",
@@ -409,7 +409,7 @@ const translations = {
     // Footer
     footerDescription:
       "NOW - Ведущий поставщик рекламных и декоративных решений в Армении. Make it happen NOW через инновационный дизайн и профессиональное исполнение.",
-    copyright: "© 2025 NOW. Все права защищены. | Сайт разработан и создан компанией <strong>NOW Digital</strong>, Армения",
+    copyright: "© 2025 NOW. Все права защищены. | Сайт разработан и создан компанией NOW Digital, Армения",
 
     // Additional translations
     premiumQuality: "Премиум качество",
