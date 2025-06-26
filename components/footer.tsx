@@ -12,7 +12,6 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4 md:mb-6">
-              <a href="/" className="flex items-center">
                 <img
                   src="/images/now-logo-header.png"
                   alt="NOW - Make it happen"
