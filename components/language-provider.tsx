@@ -81,9 +81,6 @@ const translations = {
     festivalStage: "Փառատոնի Հիմնական Բեմ",
     festivalStageCategory: "Միջոցառումների Դեկոր",
 
-    autoShowroom: "Ավտոմոբիլային Ցուցասրահ",
-    autoShowroomCategory: "Էքսպո Պավիլիոններ",
-
     // About
     aboutTitle: "Մեր Մասին",
     aboutText1:
@@ -238,10 +235,13 @@ const translations = {
     brandMaterials: "Brand Advertising Materials",
     brandMaterialsCategory: "Printing Services",
 
+    hotelLobby: "Hotel Lobby Design",
+    hotelLobbyCategory: "Commercial Decor",
+
     festivalStage: "Festival Main Stage",
     festivalStageCategory: "Event Decoration",
 
-    // About
+   // About
     aboutTitle: "About Us",
     aboutText1: "NOW is a leading company in advertising and decorative services, serving clients since 2015.",
     aboutText2:
@@ -398,9 +398,6 @@ const translations = {
 
     festivalStage: "Главная Сцена Фестиваля",
     festivalStageCategory: "Декор Мероприятий",
-
-    autoShowroom: "Автомобильный Шоурум",
-    autoShowroomCategory: "Экспо Павильоны",
 
     // About
     aboutTitle: "О нас",

@@ -11,7 +11,7 @@ export function Portfolio() {
     {
       title: t("techExpo"),
       category: t("techExpoCategory"),
-      image: "/images/wooden-shelves-display.png",
+      image: "/public/images/wooden-shelves-display.png",
       tags: ["Interactive", "LED Displays", "Modern Design"],
     },
     {
@@ -45,22 +45,10 @@ export function Portfolio() {
       tags: ["Large Format", "Vinyl", "Promotional"],
     },
     {
-      title: t("hotelLobby"),
-      category: t("hotelLobbyCategory"),
-      image: "/placeholder.svg?height=300&width=400",
-      tags: ["Luxury", "Lighting", "Reception Area"],
-    },
-    {
       title: t("festivalStage"),
       category: t("festivalStageCategory"),
       image: "/placeholder.svg?height=300&width=400",
       tags: ["Large Scale", "Themed", "Stage Tech"],
-    },
-    {
-      title: t("autoShowroom"),
-      category: t("autoShowroomCategory"),
-      image: "/placeholder.svg?height=300&width=400",
-      tags: ["Product Display", "Interactive", "Premium"],
     },
   ]
 
