@@ -1,13 +1,14 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, X, ChevronDown, Globe2 } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/components/language-provider"
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
+import type { Language } from "@/types/language"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isLangOpen, setIsLangOpen] = useState(false)
   const { language, setLanguage, t } = useLanguage()
 
   const languages = [
@@ -18,120 +19,180 @@ export function Header() {
 
   const currentLanguage = languages.find((lang) => lang.code === language)
 
+  const handleLanguageChange = (langCode: Language) => {
+    setLanguage(langCode)
+    setIsLangOpen(false)
+  }
+
   return (
     <header className="bg-white/95 backdrop-blur-sm border-b border-slate-200 sticky top-0 z-50 shadow-sm">
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-4 py-4 md:py-6">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <img src="/images/now-complete-logo.png" alt="NOW - Make it happen" className="h-10 w-auto" />
+            <a href="/" className="flex items-center">
+              <img src="/images/now-logo-header.png" alt="NOW - Make it happen" className="h-8 md:h-10 w-auto" />
+            </a>
           </div>
 
-          <nav className="hidden md:flex space-x-8">
-            <a href="#home" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">
+          <nav className="hidden md:flex space-x-6 lg:space-x-8">
+            <a
+              href="#home"
+              className="text-slate-700 hover:text-blue-600 font-medium transition-colors text-sm lg:text-base"
+            >
               {t("home")}
             </a>
-            <a href="#services" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">
+            <a
+              href="#services"
+              className="text-slate-700 hover:text-blue-600 font-medium transition-colors text-sm lg:text-base"
+            >
               {t("services")}
             </a>
-            <a href="#portfolio" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">
+            <a
+              href="#portfolio"
+              className="text-slate-700 hover:text-blue-600 font-medium transition-colors text-sm lg:text-base"
+            >
               {t("portfolio")}
             </a>
-            <a href="#about" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">
+            <a
+              href="#about"
+              className="text-slate-700 hover:text-blue-600 font-medium transition-colors text-sm lg:text-base"
+            >
               {t("about")}
             </a>
-            <a href="#contact" className="text-slate-700 hover:text-blue-600 font-medium transition-colors">
+            <a
+              href="#contact"
+              className="text-slate-700 hover:text-blue-600 font-medium transition-colors text-sm lg:text-base"
+            >
               {t("contact")}
             </a>
           </nav>
 
-          <div className="flex items-center space-x-4">
-            {/* Desktop Language Dropdown - Compact */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="hidden md:flex items-center space-x-1 px-2 py-1.5 rounded-lg hover:bg-slate-100 transition-all duration-200"
-                >
-                  <span className="text-base">{currentLanguage?.flag}</span>
-                  <ChevronDown className="h-3 w-3 text-slate-400" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent
-                align="end"
-                className="w-44 p-1 bg-white border border-slate-200 shadow-lg rounded-lg mt-1"
+          <div className="flex items-center space-x-2 md:space-x-4">
+            {/* Desktop Language Dropdown - Only Flag */}
+            <div className="hidden md:block relative">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className="flex items-center space-x-2 px-3 py-2 rounded-lg border-slate-200 hover:bg-slate-50 transition-all duration-200"
               >
-                {languages.map((lang) => (
-                  <DropdownMenuItem
-                    key={lang.code}
-                    onClick={() => setLanguage(lang.code)}
-                    className={`
-                      flex items-center space-x-3 px-3 py-2 rounded-md cursor-pointer transition-all duration-200
-                      ${language === lang.code ? "bg-blue-50 text-blue-700" : "hover:bg-slate-50 text-slate-700"}
-                    `}
-                  >
-                    <span className="text-base">{lang.flag}</span>
-                    <span className="font-medium text-sm">{lang.name}</span>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+                <span className="text-lg">{currentLanguage?.flag}</span>
+                <ChevronDown
+                  className={`h-3 w-3 text-slate-400 transition-transform ${isLangOpen ? "rotate-180" : ""}`}
+                />
+              </Button>
 
-            <Button variant="outline" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isLangOpen && (
+                <div className="absolute right-0 mt-2 w-32 bg-white border border-slate-200 shadow-lg rounded-lg py-1 z-50">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => handleLanguageChange(lang.code)}
+                      className={`
+                        w-full flex items-center space-x-3 px-3 py-2.5 text-left hover:bg-slate-50 transition-colors
+                        ${language === lang.code ? "bg-blue-50 text-blue-700 font-medium" : "text-slate-700"}
+                      `}
+                    >
+                      <span className="text-lg">{lang.flag}</span>
+                      <span className="font-medium text-sm">{lang.short}</span>
+                      {language === lang.code && <div className="ml-auto w-2 h-2 bg-blue-500 rounded-full"></div>}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Language Dropdown - In Header */}
+            <div className="md:hidden relative">
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className="flex items-center space-x-1 px-2 py-1.5 rounded-lg border-slate-200 hover:bg-slate-50 transition-all duration-200 h-8"
+              >
+                <span className="text-sm">{currentLanguage?.flag}</span>
+                <ChevronDown
+                  className={`h-3 w-3 text-slate-400 transition-transform ${isLangOpen ? "rotate-180" : ""}`}
+                />
+              </Button>
+
+              {isLangOpen && (
+                <div className="absolute right-0 mt-2 w-28 bg-white border border-slate-200 shadow-lg rounded-lg py-1 z-50">
+                  {languages.map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => handleLanguageChange(lang.code)}
+                      className={`
+                        w-full flex items-center space-x-2 px-2 py-2 text-left hover:bg-slate-50 transition-colors
+                        ${language === lang.code ? "bg-blue-50 text-blue-700 font-medium" : "text-slate-700"}
+                      `}
+                    >
+                      <span className="text-sm">{lang.flag}</span>
+                      <span className="font-medium text-xs">{lang.short}</span>
+                      {language === lang.code && <div className="ml-auto w-1.5 h-1.5 bg-blue-500 rounded-full"></div>}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Button
+              variant="outline"
+              size="icon"
+              className="md:hidden h-8 w-8"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
               {isMenuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </Button>
           </div>
         </div>
 
+        {/* Mobile Menu */}
         {isMenuOpen && (
           <nav className="md:hidden mt-4 pb-4 border-t border-slate-200 pt-4">
-            <div className="flex flex-col space-y-4">
-              <a href="#home" className="text-slate-700 hover:text-blue-600 font-medium">
+            <div className="flex flex-col space-y-3">
+              <a
+                href="#home"
+                className="text-slate-700 hover:text-blue-600 font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 {t("home")}
               </a>
-              <a href="#services" className="text-slate-700 hover:text-blue-600 font-medium">
+              <a
+                href="#services"
+                className="text-slate-700 hover:text-blue-600 font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 {t("services")}
               </a>
-              <a href="#portfolio" className="text-slate-700 hover:text-blue-600 font-medium">
+              <a
+                href="#portfolio"
+                className="text-slate-700 hover:text-blue-600 font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 {t("portfolio")}
               </a>
-              <a href="#about" className="text-slate-700 hover:text-blue-600 font-medium">
+              <a
+                href="#about"
+                className="text-slate-700 hover:text-blue-600 font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 {t("about")}
               </a>
-              <a href="#contact" className="text-slate-700 hover:text-blue-600 font-medium">
+              <a
+                href="#contact"
+                className="text-slate-700 hover:text-blue-600 font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 {t("contact")}
               </a>
-
-              {/* Mobile Language Selector - Compact */}
-              <div className="pt-4 border-t border-slate-200">
-                <div className="flex items-center justify-center mb-3">
-                  <Globe2 className="h-4 w-4 text-blue-600 mr-2" />
-                  <span className="text-sm font-medium text-slate-700">Language</span>
-                </div>
-
-                <div className="flex justify-center space-x-2">
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => setLanguage(lang.code)}
-                      className={`
-                        flex items-center justify-center w-12 h-12 rounded-lg transition-all duration-200
-                        ${
-                          language === lang.code
-                            ? "bg-blue-50 border-2 border-blue-200 scale-105"
-                            : "bg-slate-50 hover:bg-slate-100 border-2 border-transparent"
-                        }
-                      `}
-                    >
-                      <span className="text-xl">{lang.flag}</span>
-                    </button>
-                  ))}
-                </div>
-              </div>
             </div>
           </nav>
         )}
       </div>
+
+      {/* Overlay for desktop dropdown */}
+      {isLangOpen && <div className="fixed inset-0 z-40" onClick={() => setIsLangOpen(false)} />}
     </header>
   )
 }

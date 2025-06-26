@@ -92,3 +92,45 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* Mobile horizontal scroll for feature cards */
+@media (max-width: 768px) {
+  .feature-cards-container {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+
+  .feature-cards-container::-webkit-scrollbar {
+    display: none; /* WebKit */
+  }
+}
+
+/* Smooth scroll behavior */
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
+/* Snap scrolling */
+.snap-x {
+  scroll-snap-type: x mandatory;
+}
+
+.snap-start {
+  scroll-snap-align: start;
+}
+
+/* Enhanced tagline animation */
+@keyframes tagline-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-tagline-fade-in {
+  animation: tagline-fade-in 1s ease-out forwards;
+}

@@ -1,34 +1,11 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { Users, Award, Clock, Star, Target, Lightbulb } from "lucide-react"
+import { Target, Lightbulb, Users, Palette, Cog, Rocket } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 
 export function About() {
   const { t } = useLanguage()
-
-  const stats = [
-    {
-      icon: Users,
-      number: "500+",
-      label: t("happyClients"),
-    },
-    {
-      icon: Award,
-      number: "1000+",
-      label: t("completedProjects"),
-    },
-    {
-      icon: Clock,
-      number: "9+",
-      label: t("yearsExperience"),
-    },
-    {
-      icon: Star,
-      number: "4.9",
-      label: t("averageRating"),
-    },
-  ]
 
   const values = [
     {
@@ -48,6 +25,30 @@ export function About() {
     },
   ]
 
+  const capabilities = [
+    {
+      icon: Palette,
+      title: "Creative Design",
+      description: "Innovative visual solutions that capture attention and communicate your brand message effectively.",
+      color: "text-pink-600",
+      bgColor: "bg-pink-50",
+    },
+    {
+      icon: Cog,
+      title: "Technical Excellence",
+      description: "Advanced manufacturing and installation techniques ensuring durability and professional finish.",
+      color: "text-indigo-600",
+      bgColor: "bg-indigo-50",
+    },
+    {
+      icon: Rocket,
+      title: "Project Management",
+      description: "Streamlined processes from concept to completion, delivering projects on time and within budget.",
+      color: "text-emerald-600",
+      bgColor: "bg-emerald-50",
+    },
+  ]
+
   return (
     <section id="about" className="py-20 px-4 bg-slate-50">
       <div className="container mx-auto">
@@ -57,13 +58,17 @@ export function About() {
             <p className="text-lg text-slate-600 mb-6 leading-relaxed">{t("aboutText1")}</p>
             <p className="text-lg text-slate-600 mb-8 leading-relaxed">{t("aboutText2")}</p>
 
-            <div className="grid grid-cols-2 gap-6">
-              {stats.map((stat, index) => (
-                <Card key={index} className="bg-white border-slate-200 text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {capabilities.map((capability, index) => (
+                <Card key={index} className="bg-white border-slate-200 text-center hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
-                    <stat.icon className="h-8 w-8 text-blue-600 mx-auto mb-3" />
-                    <div className="text-3xl font-bold text-slate-800 mb-1">{stat.number}</div>
-                    <div className="text-slate-600 text-sm">{stat.label}</div>
+                    <div
+                      className={`w-12 h-12 ${capability.bgColor} rounded-lg flex items-center justify-center mx-auto mb-4`}
+                    >
+                      <capability.icon className={`h-6 w-6 ${capability.color}`} />
+                    </div>
+                    <h4 className="text-sm font-semibold text-slate-800 mb-2">{capability.title}</h4>
+                    <p className="text-xs text-slate-600 leading-relaxed">{capability.description}</p>
                   </CardContent>
                 </Card>
               ))}

@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useState, type ReactNode } from "react"
+import { createContext, useContext, useState, type ReactNode, useEffect, useCallback } from "react"
 
 type Language = "hy" | "en" | "ru"
 
@@ -14,7 +14,7 @@ const translations = {
   hy: {
     // Company
     companyName: "NOW",
-    slogan: "Make it happen NOW", // Keep in English as brand call-to-action
+    slogan: "Make it happen NOW",
 
     // Navigation
     home: "Գլխավոր",
@@ -51,6 +51,39 @@ const translations = {
     printServices: "Տպագրական ծառայություններ",
     printServicesDesc: "Բարձրորակ տպագրություն գովազդային նյութերի և պրոմո արտադրանքի համար",
 
+    // Portfolio
+    portfolioTitle: "Պորտֆոլիո",
+    portfolioSubtitle:
+      "Ուսումնասիրեք մեր վերջին նախագծերը և տեսեք, թե ինչպես ենք մենք կյանքի բերում ստեղծագործական տեսլականները",
+
+    // Portfolio Items
+    techExpo: "Տեխնոլոգիական Էքսպո Պավիլիոն",
+    techExpoCategory: "Էքսպո Պավիլիոններ",
+
+    mallCampaign: "Առևտրային Կենտրոնի Գովազդային Արշավ",
+    mallCampaignCategory: "Արտաքին Գովազդ",
+
+    corporateEvent: "Կորպորատիվ Միջոցառման Ձևավորում",
+    corporateEventCategory: "Միջոցառումների Դեկոր",
+
+    restaurantInterior: "Ռեստորանի Ինտերիեր",
+    restaurantInteriorCategory: "Առևտրային Դեկոր",
+
+    tradeBooth: "Առևտրային Ցուցահանդեսի Կանգառ",
+    tradeBoothCategory: "Էքսպո Պավիլիոններ",
+
+    brandMaterials: "Բրենդային Գովազդային Նյութեր",
+    brandMaterialsCategory: "Տպագրական Ծառայություններ",
+
+    hotelLobby: "Հյուրանոցի Լոբբիի Դիզայն",
+    hotelLobbyCategory: "Առևտրային Դեկոր",
+
+    festivalStage: "Փառատոնի Հիմնական Բեմ",
+    festivalStageCategory: "Միջոցառումների Դեկոր",
+
+    autoShowroom: "Ավտոմոբիլային Ցուցասրահ",
+    autoShowroomCategory: "Էքսպո Պավիլիոններ",
+
     // About
     aboutTitle: "Մեր Մասին",
     aboutText1:
@@ -67,12 +100,6 @@ const translations = {
     phone: "Հեռախոս",
     message: "Հաղորդագրություն",
     sendMessage: "Ուղարկել հաղորդագրությունը",
-
-    // Stats
-    happyClients: "Գոհ հաճախորդներ",
-    completedProjects: "Ավարտված նախագծեր",
-    yearsExperience: "Տարվա փորձ",
-    averageRating: "Միջին գնահատական",
 
     // Footer
     footerDescription:
@@ -94,7 +121,7 @@ const translations = {
     sunday: "Կիրակի: Փակ",
     address: "Հասցե",
 
-    // Service Features - Updated Armenian translations
+    // Service Features
     ledDisplays: "LED էկրաններ",
     banners: "Բաններներ",
     lightBoxes: "Լայթբոքս",
@@ -130,10 +157,9 @@ const translations = {
     city: "Երևան, Հայաստան",
     street: "Թումանյան փողոց 15",
 
-    // Missing service translation
     promoStands: "Գովազդային կանգառներ",
 
-    // Values Section - NEW ARMENIAN TRANSLATIONS
+    // Values Section
     ourValues: "Մեր Արժեքները",
     valuesDescription:
       "Սկզբունքները, որոնք ղեկավարում են մեր աշխատանքը և սահմանում մեր հանձնառությունը գերազանցության նկատմամբ",
@@ -146,6 +172,8 @@ const translations = {
 
     collaboration: "Համագործակցություն",
     collaborationDesc: "Սերտ աշխատանք հաճախորդների հետ՝ գերազանցելու սպասելիքները",
+
+    selectLanguage: "Ընտրել լեզուն",
   },
   en: {
     // Company
@@ -187,6 +215,38 @@ const translations = {
     printServices: "Printing Services",
     printServicesDesc: "High-quality printing for advertising materials and promotional products",
 
+    // Portfolio
+    portfolioTitle: "Portfolio",
+    portfolioSubtitle: "Explore our latest projects and see how we bring creative visions to life",
+
+    // Portfolio Items
+    techExpo: "Technology Expo Pavilion",
+    techExpoCategory: "Expo Pavilions",
+
+    mallCampaign: "Shopping Mall Advertising Campaign",
+    mallCampaignCategory: "Outdoor Advertising",
+
+    corporateEvent: "Corporate Event Design",
+    corporateEventCategory: "Event Decoration",
+
+    restaurantInterior: "Restaurant Interior",
+    restaurantInteriorCategory: "Commercial Decor",
+
+    tradeBooth: "Trade Show Booth",
+    tradeBoothCategory: "Expo Pavilions",
+
+    brandMaterials: "Brand Advertising Materials",
+    brandMaterialsCategory: "Printing Services",
+
+    hotelLobby: "Hotel Lobby Design",
+    hotelLobbyCategory: "Commercial Decor",
+
+    festivalStage: "Festival Main Stage",
+    festivalStageCategory: "Event Decoration",
+
+    autoShowroom: "Automotive Showroom",
+    autoShowroomCategory: "Expo Pavilions",
+
     // About
     aboutTitle: "About Us",
     aboutText1: "NOW is a leading company in advertising and decorative services, serving clients since 2015.",
@@ -202,12 +262,6 @@ const translations = {
     phone: "Phone",
     message: "Message",
     sendMessage: "Send Message",
-
-    // Stats
-    happyClients: "Happy Clients",
-    completedProjects: "Completed Projects",
-    yearsExperience: "Years Experience",
-    averageRating: "Average Rating",
 
     // Footer
     footerDescription:
@@ -265,10 +319,9 @@ const translations = {
     city: "Yerevan, Armenia",
     street: "Tumanyan Street 15",
 
-    // Missing service translation
     promoStands: "Promotional Stands",
 
-    // Values Section - ENGLISH TRANSLATIONS
+    // Values Section
     ourValues: "Our Values",
     valuesDescription: "The principles that guide our work and define our commitment to excellence",
 
@@ -280,11 +333,13 @@ const translations = {
 
     collaboration: "Collaboration",
     collaborationDesc: "Working closely with clients to exceed expectations",
+
+    selectLanguage: "Select Language",
   },
   ru: {
     // Company
     companyName: "NOW",
-    slogan: "Make it happen NOW", // Keep in English as brand call-to-action
+    slogan: "Make it happen NOW",
 
     // Navigation
     home: "Главная",
@@ -321,6 +376,38 @@ const translations = {
     printServices: "Полиграфические услуги",
     printServicesDesc: "Высококачественная печать рекламных материалов и промо продукции",
 
+    // Portfolio
+    portfolioTitle: "Портфолио",
+    portfolioSubtitle: "Изучите наши последние проекты и посмотрите, как мы воплощаем творческие идеи в жизнь",
+
+    // Portfolio Items
+    techExpo: "Технологический Экспо Павильон",
+    techExpoCategory: "Экспо Павильоны",
+
+    mallCampaign: "Рекламная Кампания Торгового Центра",
+    mallCampaignCategory: "Наружная Реклама",
+
+    corporateEvent: "Дизайн Корпоративного Мероприятия",
+    corporateEventCategory: "Декор Мероприятий",
+
+    restaurantInterior: "Интерьер Ресторана",
+    restaurantInteriorCategory: "Коммерческий Декор",
+
+    tradeBooth: "Стенд Торговой Выставки",
+    tradeBoothCategory: "Экспо Павильоны",
+
+    brandMaterials: "Брендовые Рекламные Материалы",
+    brandMaterialsCategory: "Полиграфические Услуги",
+
+    hotelLobby: "Дизайн Лобби Отеля",
+    hotelLobbyCategory: "Коммерческий Декор",
+
+    festivalStage: "Главная Сцена Фестиваля",
+    festivalStageCategory: "Декор Мероприятий",
+
+    autoShowroom: "Автомобильный Шоурум",
+    autoShowroomCategory: "Экспо Павильоны",
+
     // About
     aboutTitle: "О нас",
     aboutText1: "NOW - ведущая компания в сфере рекламных и декоративных услуг, обслуживающая клиентов с 2015 года.",
@@ -336,12 +423,6 @@ const translations = {
     phone: "Телефон",
     message: "Сообщение",
     sendMessage: "Отправить сообщение",
-
-    // Stats
-    happyClients: "Довольных клиентов",
-    completedProjects: "Завершенных проектов",
-    yearsExperience: "Лет опыта",
-    averageRating: "Средний рейтинг",
 
     // Footer
     footerDescription:
@@ -399,10 +480,9 @@ const translations = {
     city: "Ереван, Армения",
     street: "Улица Туманяна 15",
 
-    // Missing service translation
     promoStands: "Рекламные стенды",
 
-    // Values Section - RUSSIAN TRANSLATIONS
+    // Values Section
     ourValues: "Наши Ценности",
     valuesDescription: "Принципы, которые направляют нашу работу и определяют нашу приверженность к совершенству",
 
@@ -414,17 +494,43 @@ const translations = {
 
     collaboration: "Сотрудничество",
     collaborationDesc: "Тесная работа с клиентами для превышения ожиданий",
+
+    selectLanguage: "Выбрать язык",
   },
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>("hy")
+  const [language, setLanguageState] = useState<Language>("en")
+  const [isClient, setIsClient] = useState(false)
 
-  const t = (key: string): string => {
-    return translations[language][key as keyof (typeof translations)[typeof language]] || key
-  }
+  // Load saved language preference on mount
+  useEffect(() => {
+    setIsClient(true)
+    const savedLanguage = localStorage.getItem("preferred-language") as Language
+    if (savedLanguage && ["en", "hy", "ru"].includes(savedLanguage)) {
+      setLanguageState(savedLanguage)
+    }
+  }, [])
+
+  // Enhanced setLanguage function that persists to localStorage
+  const setLanguage = useCallback(
+    (lang: Language) => {
+      setLanguageState(lang)
+      if (isClient) {
+        localStorage.setItem("preferred-language", lang)
+      }
+    },
+    [isClient],
+  )
+
+  const t = useCallback(
+    (key: string): string => {
+      return translations[language][key as keyof (typeof translations)[typeof language]] || key
+    },
+    [language],
+  )
 
   return <LanguageContext.Provider value={{ language, setLanguage, t }}>{children}</LanguageContext.Provider>
 }

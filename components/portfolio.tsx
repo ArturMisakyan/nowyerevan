@@ -9,72 +9,71 @@ export function Portfolio() {
 
   const portfolioItems = [
     {
-      title: "Տեխնոլոգիական Էքսպո Պավիլիոն",
-      category: "Էքսպո Պավիլիոններ",
+      title: t("techExpo"),
+      category: t("techExpoCategory"),
       image: "/images/wooden-shelves-display.png",
-      tags: ["Ինտերակտիվ", "LED Էկրաններ", "Ժամանակակից Դիզայն"],
+      tags: ["Interactive", "LED Displays", "Modern Design"],
     },
     {
-      title: "Առևտրային Կենտրոնի Գովազդային Արշավ",
-      category: "Արտաքին Գովազդ",
+      title: t("mallCampaign"),
+      category: t("mallCampaignCategory"),
       image: "/placeholder.svg?height=300&width=400",
-      tags: ["Թվային Էկրաններ", "Բրենդի Ակտիվացում", "Լուսային Տաբլաներ"],
+      tags: ["Digital Screens", "Brand Activation", "Light Boxes"],
     },
     {
-      title: "Կորպորատիվ Միջոցառման Ձևավորում",
-      category: "Միջոցառումների Դեկոր",
+      title: t("corporateEvent"),
+      category: t("corporateEventCategory"),
       image: "/placeholder.svg?height=300&width=400",
-      tags: ["Բեմի Դիզայն", "Լուսավորություն", "Բրենդինգ"],
+      tags: ["Stage Design", "Lighting", "Branding"],
     },
     {
-      title: "Ռեստորանի Ինտերիեր",
-      category: "Առևտրային Դեկոր",
+      title: t("restaurantInterior"),
+      category: t("restaurantInteriorCategory"),
       image: "/placeholder.svg?height=300&width=400",
-      tags: ["Ինտերիերի Դիզայն", "Մթնոլորտ", "Անհատական Կահույք"],
+      tags: ["Interior Design", "Atmosphere", "Custom Furniture"],
     },
     {
-      title: "Առևտրային Ցուցահանդեսի Կանգառ",
-      category: "Էքսպո Պավիլիոններ",
+      title: t("tradeBooth"),
+      category: t("tradeBoothCategory"),
       image: "/placeholder.svg?height=300&width=400",
-      tags: ["Մոդուլային", "Ինտերակտիվ", "Ապրանքների Ցուցադրում"],
+      tags: ["Modular", "Interactive", "Product Display"],
     },
     {
-      title: "Բրենդային Գովազդային Նյութեր",
-      category: "Տպագրական Ծառայություններ",
+      title: t("brandMaterials"),
+      category: t("brandMaterialsCategory"),
       image: "/placeholder.svg?height=300&width=400",
-      tags: ["Մեծ Ֆորմատ", "Վինիլ", "Գովազդային"],
+      tags: ["Large Format", "Vinyl", "Promotional"],
     },
     {
-      title: "Հյուրանոցի Լոբբիի Դիզայն",
-      category: "Առևտրային Դեկոր",
+      title: t("hotelLobby"),
+      category: t("hotelLobbyCategory"),
       image: "/placeholder.svg?height=300&width=400",
-      tags: ["Շքեղություն", "Լուսավորություն", "Ընդունարանի Տարածք"],
+      tags: ["Luxury", "Lighting", "Reception Area"],
     },
     {
-      title: "Փառատոնի Հիմնական Բեմ",
-      category: "Միջոցառումների Դեկոր",
+      title: t("festivalStage"),
+      category: t("festivalStageCategory"),
       image: "/placeholder.svg?height=300&width=400",
-      tags: ["Մեծ Մասշտաբ", "Թեմատիկ", "Բեմական Տեխնիկա"],
+      tags: ["Large Scale", "Themed", "Stage Tech"],
     },
     {
-      title: "Ավտոմոբիլային Ցուցասրահ",
-      category: "Էքսպո Պավիլիոններ",
+      title: t("autoShowroom"),
+      category: t("autoShowroomCategory"),
       image: "/placeholder.svg?height=300&width=400",
-      tags: ["Ապրանքների Ցուցադրում", "Ինտերակտիվ", "Պրեմիում"],
+      tags: ["Product Display", "Interactive", "Premium"],
     },
   ]
 
   return (
-    <section id="portfolio" className="py-20 px-4">
+    <section id="portfolio" className="py-12 md:py-20 px-4">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">{t("portfolio")}</h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Ուսումնասիրեք մեր վերջին նախագծերը և տեսեք, թե ինչպես ենք մենք կյանքի բերում ստեղծագործական տեսլականները
-          </p>
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">{t("portfolioTitle")}</h2>
+          <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">{t("portfolioSubtitle")}</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Mobile: 2 columns, Desktop: 3 columns */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {portfolioItems.map((item, index) => (
             <Card
               key={index}
@@ -84,11 +83,11 @@ export function Portfolio() {
                 <img
                   src={item.image || "/placeholder.svg"}
                   alt={item.title}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-32 md:h-48 lg:h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 left-4 right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
-                  <div className="flex flex-wrap gap-2">
+                <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 right-2 md:right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                  <div className="flex flex-wrap gap-1 md:gap-2">
                     {item.tags.map((tag, tagIndex) => (
                       <Badge key={tagIndex} variant="secondary" className="bg-white/90 text-slate-700 text-xs">
                         {tag}
@@ -97,9 +96,11 @@ export function Portfolio() {
                   </div>
                 </div>
               </div>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-semibold text-slate-800 mb-2">{item.title}</h3>
-                <p className="text-blue-600 font-medium text-sm">{item.category}</p>
+              <CardContent className="p-3 md:p-4 lg:p-6">
+                <h3 className="text-sm md:text-lg lg:text-xl font-semibold text-slate-800 mb-1 md:mb-2 line-clamp-2">
+                  {item.title}
+                </h3>
+                <p className="text-blue-600 font-medium text-xs md:text-sm lg:text-base">{item.category}</p>
               </CardContent>
             </Card>
           ))}
