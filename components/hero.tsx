@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles, Rocket, ChevronLeft, ChevronRight } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
@@ -9,10 +10,8 @@ export function Hero() {
   const { t } = useLanguage()
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  // Carousel images (same image duplicated)
   const slides = ["/images/gray-background.jpg", "/images/gray-background.jpg"]
 
-  // Auto-slide carousel
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
@@ -20,7 +19,6 @@ export function Hero() {
     return () => clearInterval(interval)
   }, [slides.length])
 
-  // Manual navigation
   const goToPrevious = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
   }
@@ -44,13 +42,13 @@ export function Hero() {
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
-            <img src={slide || "/placeholder.svg"} alt="Background" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-white/60"></div>
+            <img src={slide} alt="Background" className="w-full h-full object-cover" />
+            <div className="absolute inset-0 bg-white/60" />
           </div>
         ))}
       </div>
 
-      {/* Enhanced Carousel Controls - Positioned within hero bounds */}
+      {/* Carousel Navigation */}
       <button
         onClick={goToPrevious}
         className="absolute left-4 md:left-8 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 hover:bg-white text-slate-800 rounded-full p-3 md:p-4 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 border border-slate-200"
@@ -67,7 +65,7 @@ export function Hero() {
         <ChevronRight className="h-6 w-6 md:h-7 md:w-7" />
       </button>
 
-      {/* Enhanced Carousel Dots - Positioned within hero bounds */}
+      {/* Carousel Dots */}
       <div className="absolute bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
         {slides.map((_, index) => (
           <button
@@ -83,21 +81,18 @@ export function Hero() {
         ))}
       </div>
 
-      {/* Content */}
+      {/* Main Content */}
       <div className="container mx-auto text-center relative z-10 px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Logo Section */}
+          {/* Logo */}
           <div className="mb-6 md:mb-8 lg:mb-12 flex flex-col justify-center items-center">
             <div className="relative logo-container">
               <div className="relative flex flex-col items-center">
-                {/* Main "now" logo */}
                 <img
                   src="/images/now-logo-empty.png"
                   alt="NOW Logo"
                   className="h-16 md:h-24 lg:h-40 w-auto drop-shadow-lg relative z-10"
                 />
-
-                {/* "make it happen" tagline with typing effect */}
                 <div className="absolute top-0 right-0 z-20">
                   <img
                     src="/images/make.png"
@@ -109,7 +104,7 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Main Heading */}
+          {/* Headline */}
           <div className="mb-4 md:mb-6 lg:mb-8">
             <h1 className="text-2xl md:text-4xl lg:text-7xl font-bold text-slate-900 mb-3 md:mb-4 lg:mb-6 leading-tight px-2">
               {t("heroTitle")}{" "}
@@ -120,71 +115,48 @@ export function Hero() {
               {t("heroTitleEnd")}
             </h1>
             <div className="flex justify-center mb-3 md:mb-4 lg:mb-6">
-              <div className="w-12 md:w-16 lg:w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
+              <div className="w-12 md:w-16 lg:w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
             </div>
           </div>
 
-          {/* Enhanced Subtitle */}
+          {/* Subtitle */}
           <p className="text-base md:text-lg lg:text-2xl text-slate-700 mb-6 md:mb-8 lg:mb-12 leading-relaxed max-w-5xl mx-auto font-medium px-4">
             {t("heroSubtitle")}
           </p>
 
-          {/* Call to Action Buttons */}
+          {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 lg:gap-6 justify-center mb-8 md:mb-12 lg:mb-16 px-4">
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 md:px-8 lg:px-12 py-3 md:py-4 lg:py-6 text-base md:text-lg lg:text-xl font-semibold shadow-xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
-            >
-              <Rocket className="mr-2 h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
-              {t("getStarted")}
-              <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-2 border-slate-800 text-slate-800 hover:bg-slate-800 hover:text-white px-6 md:px-8 lg:px-12 py-3 md:py-4 lg:py-6 text-base md:text-lg lg:text-xl font-semibold transition-all duration-300 transform hover:scale-105 bg-white/80 backdrop-blur-sm"
-            >
-              <Sparkles className="mr-2 h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
-              {t("viewWork")}
-            </Button>
+            <Link href="https://nowyerevan.am/#contact" passHref>
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 md:px-8 lg:px-12 py-3 md:py-4 lg:py-6 text-base md:text-lg lg:text-xl font-semibold shadow-xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
+              >
+                <Rocket className="mr-2 h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
+                {t("getStarted")}
+                <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
+              </Button>
+            </Link>
+
+            <Link href="https://nowyerevan.am/#portfolio" passHref>
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-2 border-slate-800 text-slate-800 hover:bg-slate-800 hover:text-white px-6 md:px-8 lg:px-12 py-3 md:py-4 lg:py-6 text-base md:text-lg lg:text-xl font-semibold transition-all duration-300 transform hover:scale-105 bg-white/80 backdrop-blur-sm"
+              >
+                <Sparkles className="mr-2 h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
+                {t("viewWork")}
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
 
+      {/* Animations */}
       <style jsx>{`
-        /* Typing reveal animation - reveals image from left to right like typing */
         @keyframes typing-reveal {
           0% {
             opacity: 0;
             clip-path: inset(0 100% 0 0);
-          }
-          10% {
-            opacity: 1;
-            clip-path: inset(0 90% 0 0);
-          }
-          20% {
-            clip-path: inset(0 80% 0 0);
-          }
-          30% {
-            clip-path: inset(0 70% 0 0);
-          }
-          40% {
-            clip-path: inset(0 60% 0 0);
-          }
-          50% {
-            clip-path: inset(0 50% 0 0);
-          }
-          60% {
-            clip-path: inset(0 40% 0 0);
-          }
-          70% {
-            clip-path: inset(0 30% 0 0);
-          }
-          80% {
-            clip-path: inset(0 20% 0 0);
-          }
-          90% {
-            clip-path: inset(0 10% 0 0);
           }
           100% {
             opacity: 1;
@@ -198,7 +170,6 @@ export function Hero() {
           animation-fill-mode: both;
         }
 
-        /* Responsive positioning to match header logo */
         @media (max-width: 1024px) {
           .animate-typing-reveal {
             top: -0.25rem;
