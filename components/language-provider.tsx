@@ -98,8 +98,7 @@ const translations = {
     // Footer
     footerDescription:
       "NOW - Հայաստանում գովազդային և դեկորատիվ լուծումների առաջատար մատակարար: Make it happen NOW նորարարական դիզայնի և մասնագիտական կատարման միջոցով:",
-    copyright: "© 2025 NOW. Բոլոր իրավունքները պաշտպանված են։ | Կայքը ձևավորված և կառուցված է <strong>NOW Digital</strong> ընկերության կողմից, Հայաստան
-",
+    copyright: "© 2025 NOW. Բոլոր իրավունքները պաշտպանված են։ | Կայքը ձևավորված և կառուցված է <strong>NOW Digital</strong> ընկերության կողմից, Հայաստան",
 
     // Additional missing translations
     premiumQuality: "Պրեմիում որակ",

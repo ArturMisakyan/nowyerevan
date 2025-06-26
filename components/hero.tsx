@@ -202,16 +202,24 @@ export function Hero() {
     </section>
   )
 }
-@keyframes letterDrop {
-  0% {
-    transform: translateY(-100%);
+<style jsx>{`
+  @keyframes letterDrop {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  .animated-letter {
     opacity: 0;
+    transform: translateY(-100%);
+    animation: letterDrop 0.5s ease forwards;
   }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+`}</style>
+
 
 .animated-letter {
   opacity: 0;
