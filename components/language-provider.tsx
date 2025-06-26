@@ -75,9 +75,6 @@ const translations = {
     brandMaterials: "Բրենդային Գովազդային Նյութեր",
     brandMaterialsCategory: "Տպագրական Ծառայություններ",
 
-    hotelLobby: "Հյուրանոցի Լոբբիի Դիզայն",
-    hotelLobbyCategory: "Առևտրային Դեկոր",
-
     festivalStage: "Փառատոնի Հիմնական Բեմ",
     festivalStageCategory: "Միջոցառումների Դեկոր",
 
@@ -101,7 +98,8 @@ const translations = {
     // Footer
     footerDescription:
       "NOW - Հայաստանում գովազդային և դեկորատիվ լուծումների առաջատար մատակարար: Make it happen NOW նորարարական դիզայնի և մասնագիտական կատարման միջոցով:",
-    copyright: "© 2025 NOW: Բոլոր իրավունքները պաշտպանված են: | Ստեղծված է գերազանցությամբ Հայաստանում",
+    copyright: "© 2025 NOW. Բոլոր իրավունքները պաշտպանված են։ | Կայքը ձևավորված և կառուցված է <strong>NOW Digital</strong> ընկերության կողմից, Հայաստան
+",
 
     // Additional missing translations
     premiumQuality: "Պրեմիում որակ",
@@ -235,9 +233,6 @@ const translations = {
     brandMaterials: "Brand Advertising Materials",
     brandMaterialsCategory: "Printing Services",
 
-    hotelLobby: "Hotel Lobby Design",
-    hotelLobbyCategory: "Commercial Decor",
-
     festivalStage: "Festival Main Stage",
     festivalStageCategory: "Event Decoration",
 
@@ -260,7 +255,7 @@ const translations = {
     // Footer
     footerDescription:
       "NOW - Leading provider of advertising and decorative solutions in Armenia. Make it happen NOW through innovative design and professional execution.",
-    copyright: "© 2025 NOW. All rights reserved. | Designed with excellence in Armenia",
+    copyright: "© 2025 NOW. All rights reserved. | Designed and built by <strong>NOW Digital</strong>, Armenia",
 
     // Additional translations
     premiumQuality: "Premium Quality",
@@ -393,9 +388,6 @@ const translations = {
     brandMaterials: "Брендовые Рекламные Материалы",
     brandMaterialsCategory: "Полиграфические Услуги",
 
-    hotelLobby: "Дизайн Лобби Отеля",
-    hotelLobbyCategory: "Коммерческий Декор",
-
     festivalStage: "Главная Сцена Фестиваля",
     festivalStageCategory: "Декор Мероприятий",
 
@@ -418,7 +410,7 @@ const translations = {
     // Footer
     footerDescription:
       "NOW - Ведущий поставщик рекламных и декоративных решений в Армении. Make it happen NOW через инновационный дизайн и профессиональное исполнение.",
-    copyright: "© 2025 NOW. Все права защищены. | Создано с превосходством в Армении",
+    copyright: "© 2025 NOW. Все права защищены. | Сайт разработан и создан компанией <strong>NOW Digital</strong>, Армения",
 
     // Additional translations
     premiumQuality: "Премиум качество",
