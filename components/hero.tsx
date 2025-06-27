@@ -24,7 +24,7 @@ export function Hero() {
   }
 
   return (
-    <section id="home" className="relative overflow-hidden min-h-screen pt-12 md:pt-24">
+    <section id="home" className="relative overflow-hidden min-h-screen pt-8 md:pt-16 flex items-center">
       {/* Background Carousel */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
@@ -56,12 +56,11 @@ export function Hero() {
         ))}
       </div>
 
-      {/* Main Content */}
+      {/* Content */}
       <div className="container mx-auto text-center relative z-10 px-4">
         <div className="max-w-7xl mx-auto">
-
           {/* Logo */}
-          <div className="mb-6 md:mb-8 lg:mb-12 flex flex-col justify-center items-center">
+          <div className="mt-4 md:mt-12 mb-6 md:mb-8 lg:mb-12 flex flex-col justify-center items-center">
             <div className="relative logo-container">
               <div className="relative flex flex-col items-center">
                 <img
