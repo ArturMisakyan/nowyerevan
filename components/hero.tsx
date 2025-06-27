@@ -59,25 +59,25 @@ export function Hero() {
       {/* Main Content */}
       <div className="container mx-auto text-center relative z-10 px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Logo */}
-          <div className="mb-6 md:mb-8 lg:mb-12 flex flex-col justify-center items-center">
-            <div className="relative logo-container">
-              <div className="relative flex flex-col items-center">
-                <img
-                  src="/images/now-logo-empty.png"
-                  alt="NOW Logo"
-                  className="h-16 md:h-24 lg:h-40 w-auto drop-shadow-lg relative z-10"
-                />
-                <div className="absolute top-0 right-0 z-20">
-                  <img
-                    src="/images/make.png"
-                    alt="Make it happen"
-                    className="h-2.5 md:h-4 lg:h-7 w-auto animate-typing-reveal"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
+{/* Logo */}
+<div className="mt-8 md:mt-12 mb-6 md:mb-8 lg:mb-12 flex flex-col justify-center items-center">
+  <div className="relative logo-container">
+    <div className="relative flex flex-col items-center">
+      <img
+        src="/images/now-logo-empty.png"
+        alt="NOW Logo"
+        className="h-16 md:h-24 lg:h-40 w-auto drop-shadow-lg relative z-10"
+      />
+      <div className="absolute top-0 right-0 z-20">
+        <img
+          src="/images/make.png"
+          alt="Make it happen"
+          className="h-2.5 md:h-4 lg:h-7 w-auto animate-typing-reveal"
+        />
+      </div>
+    </div>
+  </div>
+</div>
 
           {/* Headline */}
           <div className="mb-4 md:mb-6 lg:mb-8">
