@@ -53,8 +53,7 @@ const translations = {
 
     // Portfolio
     portfolioTitle: "Պորտֆոլիո",
-    portfolioSubtitle:
-      "Մեր վերջին նախագծերը վկայում են մեկ բան՝ եթե կարելի է պատկերացնել, ուրեմն կարելի է իրականացնել",
+    portfolioSubtitle: "Մեր վերջին նախագծերը վկայում են մեկ բան՝ եթե կարելի է պատկերացնել, ուրեմն կարելի է իրականացնել",
 
     // Portfolio Items
     techExpo: "Էքսպո Պավիլիոն",
@@ -78,12 +77,42 @@ const translations = {
     festivalStage: "Փառատոնի Հիմնական Բեմ",
     festivalStageCategory: "Միջոցառումների Դեկոր",
 
+    // Portfolio Tags
+    interactive: "Ինտերակտիվ",
+    modernDesign: "Ժամանակակից Դիզայն",
+    digitalScreens: "Թվային Էկրաններ",
+    brandActivation: "Բրենդի Ակտիվացում",
+    lighting: "Լուսավորություն",
+    branding: "Բրենդավորում",
+    interiorDesign: "Ինտերիերի Դիզայն",
+    atmosphere: "Մթնոլորտ",
+    customFurniture: "Անհատական Կահույք",
+    modular: "Մոդուլային",
+    productDisplay: "Ապրանքի Ցուցադրում",
+    largeFormat: "Լայն Ֆորմատ",
+    vinyl: "Վինիլ",
+    promotional: "Գովազդային",
+    largeScale: "Լայն Մասշտաբ",
+    themed: "Թեմատիկ",
+    stageTech: "Բեմական Տեխնոլոգիա",
+
     // About
     aboutTitle: "Մեր Մասին",
     aboutText1:
-      "NOW-ը առաջատար ընկերություն է գովազդային և դեկորատիվ ծառայությունների ոլորտում, որը ծառայություն է մատուցում 2015 թվականից:",
+      "NOW-ը նորարարական ընկերություն է, որը մասնագիտացված է գովազդային և դեկորատիվ լուծումների ոլորտում: Մենք հավատում ենք, որ յուրաքանչյուր գաղափար կարող է դառնալ իրականություն:",
     aboutText2:
-      "Մեր թիմը բաղկացած է փորձառու դիզայներից, ճարտարապետներից և տեխնիկական մասնագետներից, ովքեր ապահովում են բարձրորակ արդյունք:",
+      "Մեր երիտասարդ և էներգիկ թիմը բաղկացած է փորձառու դիզայներից, ճարտարապետներից և տեխնիկական մասնագետներից, ովքեր ապահովում են բարձրորակ և նորարարական արդյունք:",
+
+    // About Capabilities
+    creativeDesign: "Ստեղծագործական Դիզայն",
+    creativeDesignDesc:
+      "Նորարարական տեսողական լուծումներ, որոնք գրավում են ուշադրությունը և արդյունավետ հաղորդում են ձեր բրենդի հաղորդագրությունը:",
+    technicalExcellence: "Տեխնիկական Գերազանցություն",
+    technicalExcellenceDesc:
+      "Առաջադեմ արտադրական և տեղադրման տեխնիկաներ, որոնք ապահովում են ամրություն և մասնագիտական ավարտ:",
+    projectManagement: "Նախագծի Կառավարում",
+    projectManagementDesc:
+      "Պարզեցված գործընթացներ գաղափարից մինչև ավարտ՝ ապահովելով նախագծերի ժամանակին և բյուջեի շրջանակներում իրականացումը:",
 
     // Contact
     contactTitle: "Կապվեք Մեզ Հետ",
@@ -97,8 +126,9 @@ const translations = {
 
     // Footer
     footerDescription:
-      "NOW - Հայաստանում գովազդային և դեկորատիվ լուծումների առաջատար մատակարար: Make it happen NOW նորարարական դիզայնի և մասնագիտական կատարման միջոցով:",
-    copyright: "© 2025 NOW. Բոլոր իրավունքները պաշտպանված են։ | Կայքը ձևավորված և կառուցված է NOW Digital ընկերության կողմից, Հայաստան",
+      "NOW - Հայաստանում գովազդային և դեկորատիվ լուծումների նորարարական մատակարար: Make it happen NOW ստեղծագործական դիզայնի և մասնագիտական կատարման միջոցով:",
+    copyright:
+      "© 2025 NOW. Բոլոր իրավունքները պաշտպանված են։ | Կայքը ձևավորված և կառուցված է NOW Digital ընկերության կողմից, Հայաստան",
 
     // Additional missing translations
     premiumQuality: "Պրեմիում որակ",
@@ -112,7 +142,6 @@ const translations = {
     workingHours: "Աշխատանքային ժամեր",
     mondayFriday: "Երկուշաբթի - Ուրբաթ: 9:00 - 18:00",
     saturday: "Շաբաթ: 10:00 - 16:00",
-    sunday: "Կիրակի: Փակ",
     address: "Հասցե",
 
     // Service Features
@@ -235,11 +264,42 @@ const translations = {
     festivalStage: "Festival Main Stage",
     festivalStageCategory: "Event Decoration",
 
-   // About
+    // Portfolio Tags
+    interactive: "Interactive",
+    modernDesign: "Modern Design",
+    digitalScreens: "Digital Screens",
+    brandActivation: "Brand Activation",
+    lighting: "Lighting",
+    branding: "Branding",
+    interiorDesign: "Interior Design",
+    atmosphere: "Atmosphere",
+    customFurniture: "Custom Furniture",
+    modular: "Modular",
+    productDisplay: "Product Display",
+    largeFormat: "Large Format",
+    vinyl: "Vinyl",
+    promotional: "Promotional",
+    largeScale: "Large Scale",
+    themed: "Themed",
+    stageTech: "Stage Tech",
+
+    // About
     aboutTitle: "About Us",
-    aboutText1: "NOW is a leading company in advertising and decorative services, serving clients since 2015.",
+    aboutText1:
+      "NOW is an innovative company specializing in advertising and decorative solutions. We believe that every idea can become reality.",
     aboutText2:
-      "Our team consists of experienced designers, architects and technical specialists who ensure high-quality results.",
+      "Our young and energetic team consists of experienced designers, architects and technical specialists who ensure high-quality and innovative results.",
+
+    // About Capabilities
+    creativeDesign: "Creative Design",
+    creativeDesignDesc:
+      "Innovative visual solutions that capture attention and communicate your brand message effectively.",
+    technicalExcellence: "Technical Excellence",
+    technicalExcellenceDesc:
+      "Advanced manufacturing and installation techniques ensuring durability and professional finish.",
+    projectManagement: "Project Management",
+    projectManagementDesc:
+      "Streamlined processes from concept to completion, delivering projects on time and within budget.",
 
     // Contact
     contactTitle: "Contact Us",
@@ -253,7 +313,7 @@ const translations = {
 
     // Footer
     footerDescription:
-      "NOW - Leading provider of advertising and decorative solutions in Armenia. Make it happen NOW through innovative design and professional execution.",
+      "NOW - Innovative provider of advertising and decorative solutions in Armenia. Make it happen NOW through creative design and professional execution.",
     copyright: "© 2025 NOW. All rights reserved. | Designed and built by NOW Digital, Armenia",
 
     // Additional translations
@@ -268,7 +328,6 @@ const translations = {
     workingHours: "Working Hours",
     mondayFriday: "Monday - Friday: 9:00 - 18:00",
     saturday: "Saturday: 10:00 - 16:00",
-    sunday: "Sunday: Closed",
     address: "Address",
 
     // Service Features
@@ -366,7 +425,8 @@ const translations = {
 
     // Portfolio
     portfolioTitle: "Портфолио",
-    portfolioSubtitle: "Наши последние проекты доказывают одно: если можно это представить — значит, можно и реализовать",
+    portfolioSubtitle:
+      "Наши последние проекты доказывают одно: если можно это представить — значит, можно и реализовать",
 
     // Portfolio Items
     techExpo: "Экспо Павильон",
@@ -390,11 +450,42 @@ const translations = {
     festivalStage: "Главная Сцена Фестиваля",
     festivalStageCategory: "Декор Мероприятий",
 
+    // Portfolio Tags
+    interactive: "Интерактивный",
+    modernDesign: "Современный Дизайн",
+    digitalScreens: "Цифровые Экраны",
+    brandActivation: "Активация Бренда",
+    lighting: "Освещение",
+    branding: "Брендинг",
+    interiorDesign: "Дизайн Интерьера",
+    atmosphere: "Атмосфера",
+    customFurniture: "Индивидуальная Мебель",
+    modular: "Модульный",
+    productDisplay: "Демонстрация Продукта",
+    largeFormat: "Большой Формат",
+    vinyl: "Винил",
+    promotional: "Рекламный",
+    largeScale: "Крупномасштабный",
+    themed: "Тематический",
+    stageTech: "Сценические Технологии",
+
     // About
     aboutTitle: "О нас",
-    aboutText1: "NOW - ведущая компания в сфере рекламных и декоративных услуг, обслуживающая клиентов с 2015 года.",
+    aboutText1:
+      "NOW - инновационная компания, специализирующаяся на рекламных и декоративных решениях. Мы верим, что каждая идея может стать реальностью.",
     aboutText2:
-      "Наша команда состоит из опытных дизайнеров, архитекторов и технических специалистов, обеспечивающих высококачественный результат.",
+      "Наша молодая и энергичная команда состоит из опытных дизайнеров, архитекторов и технических специалистов, обеспечивающих высококачественные и инновационные результаты.",
+
+    // About Capabilities
+    creativeDesign: "Креативный Дизайн",
+    creativeDesignDesc:
+      "Инновационные визуальные решения, которые привлекают внимание и эффективно передают сообщение вашего бренда.",
+    technicalExcellence: "Техническое Совершенство",
+    technicalExcellenceDesc:
+      "Передовые производственные и монтажные технологии, обеспечивающие долговечность и профессиональную отделку.",
+    projectManagement: "Управление Проектами",
+    projectManagementDesc:
+      "Оптимизированные процессы от концепции до завершения, обеспечивающие выполнение проектов в срок и в рамках бюджета.",
 
     // Contact
     contactTitle: "Свяжитесь с нами",
@@ -408,7 +499,7 @@ const translations = {
 
     // Footer
     footerDescription:
-      "NOW - Ведущий поставщик рекламных и декоративных решений в Армении. Make it happen NOW через инновационный дизайн и профессиональное исполнение.",
+      "NOW - Инновационный поставщик рекламных и декоративных решений в Армении. Make it happen NOW через креативный дизайн и профессиональное исполнение.",
     copyright: "© 2025 NOW. Все права защищены. | Сайт разработан и создан компанией NOW Digital, Армения",
 
     // Additional translations
@@ -423,7 +514,6 @@ const translations = {
     workingHours: "Рабочие часы",
     mondayFriday: "Понедельник - Пятница: 9:00 - 18:00",
     saturday: "Суббота: 10:00 - 16:00",
-    sunday: "Воскресенье: Закрыто",
     address: "Адрес",
 
     // Service Features

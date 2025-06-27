@@ -28,22 +28,22 @@ export function About() {
   const capabilities = [
     {
       icon: Palette,
-      title: "Creative Design",
-      description: "Innovative visual solutions that capture attention and communicate your brand message effectively.",
+      title: t("creativeDesign"),
+      description: t("creativeDesignDesc"),
       color: "text-pink-600",
       bgColor: "bg-pink-50",
     },
     {
       icon: Cog,
-      title: "Technical Excellence",
-      description: "Advanced manufacturing and installation techniques ensuring durability and professional finish.",
+      title: t("technicalExcellence"),
+      description: t("technicalExcellenceDesc"),
       color: "text-indigo-600",
       bgColor: "bg-indigo-50",
     },
     {
       icon: Rocket,
-      title: "Project Management",
-      description: "Streamlined processes from concept to completion, delivering projects on time and within budget.",
+      title: t("projectManagement"),
+      description: t("projectManagementDesc"),
       color: "text-emerald-600",
       bgColor: "bg-emerald-50",
     },

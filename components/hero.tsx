@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles, Rocket, ChevronLeft, ChevronRight } from "lucide-react"
+import { ArrowRight, Sparkles, Rocket } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
 
 export function Hero() {
@@ -18,14 +18,6 @@ export function Hero() {
     }, 5000)
     return () => clearInterval(interval)
   }, [slides.length])
-
-  const goToPrevious = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
-  }
-
-  const goToNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
-  }
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index)
@@ -42,31 +34,14 @@ export function Hero() {
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
-            <img src={slide} alt="Background" className="w-full h-full object-cover" />
+            <img src={slide || "/placeholder.svg"} alt="Background" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-white/60" />
           </div>
         ))}
       </div>
 
-      {/* Carousel Navigation */}
-      <button
-        onClick={goToPrevious}
-        className="absolute left-4 md:left-8 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 hover:bg-white text-slate-800 rounded-full p-3 md:p-4 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 border border-slate-200"
-        aria-label="Previous slide"
-      >
-        <ChevronLeft className="h-6 w-6 md:h-7 md:w-7" />
-      </button>
-
-      <button
-        onClick={goToNext}
-        className="absolute right-4 md:right-8 top-1/2 transform -translate-y-1/2 z-20 bg-white/90 hover:bg-white text-slate-800 rounded-full p-3 md:p-4 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-110 border border-slate-200"
-        aria-label="Next slide"
-      >
-        <ChevronRight className="h-6 w-6 md:h-7 md:w-7" />
-      </button>
-
-      {/* Carousel Dots */}
-      <div className="absolute bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+      {/* Carousel Dots - Moved to bottom-right */}
+      <div className="absolute bottom-4 md:bottom-6 right-4 md:right-6 z-20 flex space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}

@@ -12,12 +12,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-12">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4 md:mb-6">
-                <img
-                  src="/images/now-logo-header.png"
-                  alt="NOW - Make it happen"
-                  className="h-6 md:h-8 w-auto filter brightness-0 invert"
-                />
-              </a>
+              <img
+                src="/images/now-logo-header.png"
+                alt="NOW - Make it happen"
+                className="h-6 md:h-8 w-auto filter brightness-0 invert"
+              />
             </div>
             <p className="text-slate-300 mb-4 md:mb-6 leading-relaxed max-w-md text-sm md:text-base">
               {t("footerDescription")}
