@@ -47,7 +47,7 @@ export function Portfolio() {
     {
       title: t("festivalStage"),
       category: t("festivalStageCategory"),
-      image: "/Stage.webp",
+      image: "/images/Stage.webp",
       tags: [t("largeScale"), t("themed"), t("stageTech")],
     },
   ]
