@@ -60,11 +60,11 @@ export function Contact() {
 
                 <div>
                   <Label htmlFor="phone" className="text-slate-700 font-medium text-sm md:text-base">
-                    {t("Her")}
+                    {t("phone")}
                   </Label>
                   <Input
                     id="phone"
-                    name="phone"
+                    name="trubka"
                     className="mt-2 border-slate-200 focus:border-blue-500 focus:ring-blue-500 h-10 md:h-11"
                   />
                 </div>
