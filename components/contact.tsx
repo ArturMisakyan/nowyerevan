@@ -60,7 +60,7 @@ export function Contact() {
 
                 <div>
                   <Label htmlFor="phone" className="text-slate-700 font-medium text-sm md:text-base">
-                    {t("phone")}
+                    {t("Her")}
                   </Label>
                   <Input
                     id="phone"
