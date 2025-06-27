@@ -30,7 +30,9 @@ export function Header() {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
             <a href="/" className="flex items-center">
-              <img src="/images/now-logo-header.png" alt="NOW - Make it happen" className="h-8 md:h-10 w-auto" />
+              <div className="pt-2 md:pt-4">
+  <img src="/images/now-logo-header.png" alt="NOW - Make it happen" className="h-8 md:h-10 w-auto" />
+</div>
             </a>
           </div>
 
