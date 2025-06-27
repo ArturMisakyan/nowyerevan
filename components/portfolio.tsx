@@ -11,7 +11,7 @@ export function Portfolio() {
     {
       title: t("techExpo"),
       category: t("techExpoCategory"),
-      image: "/images/Booth.webp	",
+      image: "/images/Exhibition Booth.webp",
       tags: [t("interactive"), t("ledDisplays"), t("modernDesign")],
     },
     {

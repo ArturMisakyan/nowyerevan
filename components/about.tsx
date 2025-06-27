@@ -77,7 +77,7 @@ export function About() {
 
           <div className="relative">
             <img
-              src="/placeholder.svg?height=600&width=500"
+              src="/images/About_us.webp"
               alt="Our team at work"
               className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
             />
