@@ -1,9 +1,5 @@
 "use client"
 
-import type React from "react"
-
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -13,57 +9,6 @@ import { useLanguage } from "@/components/language-provider"
 
 export function Contact() {
   const { t } = useLanguage()
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    try {
-      // Create mailto link with form data
-      const subject = encodeURIComponent(`New Contact Form Submission from ${formData.name}`)
-      const body = encodeURIComponent(`
-Name: ${formData.name}
-Email: ${formData.email}
-Phone: ${formData.phone}
-
-Message:
-${formData.message}
-      `)
-
-      const mailtoLink = `mailto:nowyerevan@gmail.com?subject=${subject}&body=${body}`
-
-      // Open email client
-      window.location.href = mailtoLink
-
-      // Show success state
-      setIsSubmitted(true)
-
-      // Reset form after delay
-      setTimeout(() => {
-        setFormData({ name: "", email: "", phone: "", message: "" })
-        setIsSubmitted(false)
-      }, 3000)
-    } catch (error) {
-      console.error("Error sending email:", error)
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
 
   return (
     <section id="contact" className="py-12 md:py-20 px-4">
@@ -81,94 +26,80 @@ ${formData.message}
                 {t("getInTouch")}
               </CardTitle>
             </CardHeader>
+
             <CardContent>
-              {isSubmitted ? (
-                <div className="text-center py-8">
-                  <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-slate-800 mb-2">Message Sent!</h3>
-                  <p className="text-slate-600">Your email client should open shortly. Thank you for contacting us!</p>
+              <form
+                action="https://formsubmit.co/nowyerevan@gmail.com"
+                method="POST"
+                className="space-y-4 md:space-y-6"
+              >
+                <div>
+                  <Label htmlFor="name" className="text-slate-700 font-medium text-sm md:text-base">
+                    {t("name")}
+                  </Label>
+                  <Input
+                    id="name"
+                    name="name"
+                    required
+                    className="mt-2 border-slate-200 focus:border-blue-500 focus:ring-blue-500 h-10 md:h-11"
+                  />
                 </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
-                  <div>
-                    <Label htmlFor="name" className="text-slate-700 font-medium text-sm md:text-base">
-                      {t("name")}
-                    </Label>
-                    <Input
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleChange}
-                      className="mt-2 border-slate-200 focus:border-blue-500 focus:ring-blue-500 h-10 md:h-11"
-                      required
-                    />
-                  </div>
 
-                  <div>
-                    <Label htmlFor="email" className="text-slate-700 font-medium text-sm md:text-base">
-                      {t("email")}
-                    </Label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="mt-2 border-slate-200 focus:border-blue-500 focus:ring-blue-500 h-10 md:h-11"
-                      required
-                    />
-                  </div>
+                <div>
+                  <Label htmlFor="email" className="text-slate-700 font-medium text-sm md:text-base">
+                    {t("email")}
+                  </Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    className="mt-2 border-slate-200 focus:border-blue-500 focus:ring-blue-500 h-10 md:h-11"
+                  />
+                </div>
 
-                  <div>
-                    <Label htmlFor="phone" className="text-slate-700 font-medium text-sm md:text-base">
-                      {t("phone")}
-                    </Label>
-                    <Input
-                      id="phone"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className="mt-2 border-slate-200 focus:border-blue-500 focus:ring-blue-500 h-10 md:h-11"
-                    />
-                  </div>
+                <div>
+                  <Label htmlFor="phone" className="text-slate-700 font-medium text-sm md:text-base">
+                    {t("phone")}
+                  </Label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    className="mt-2 border-slate-200 focus:border-blue-500 focus:ring-blue-500 h-10 md:h-11"
+                  />
+                </div>
 
-                  <div>
-                    <Label htmlFor="message" className="text-slate-700 font-medium text-sm md:text-base">
-                      {t("message")}
-                    </Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      rows={4}
-                      className="mt-2 border-slate-200 focus:border-blue-500 focus:ring-blue-500 resize-none"
-                      required
-                    />
-                  </div>
+                <div>
+                  <Label htmlFor="message" className="text-slate-700 font-medium text-sm md:text-base">
+                    {t("message")}
+                  </Label>
+                  <Textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    required
+                    className="mt-2 border-slate-200 focus:border-blue-500 focus:ring-blue-500 resize-none"
+                  />
+                </div>
 
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 md:py-4 text-sm md:text-base font-medium"
-                  >
-                    {isSubmitting ? (
-                      <div className="flex items-center">
-                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                        Sending...
-                      </div>
-                    ) : (
-                      <>
-                        <Send className="h-4 w-4 mr-2" />
-                        {t("sendMessage")}
-                      </>
-                    )}
-                  </Button>
-                </form>
-              )}
+                {/* Optional: disable CAPTCHA */}
+                <input type="hidden" name="_captcha" value="false" />
+
+                {/* Optional: redirect to thank you page */}
+                <input type="hidden" name="_next" value="https://nowyerevan.am/thanks" />
+
+                <button
+                  type="submit"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 md:py-4 text-sm md:text-base font-medium flex items-center justify-center"
+                >
+                  <Send className="h-4 w-4 mr-2" />
+                  {t("sendMessage")}
+                </button>
+              </form>
             </CardContent>
           </Card>
 
+          {/* Right side stays same */}
           <div className="space-y-4 md:space-y-6">
             <Card className="bg-white border-slate-200 shadow-lg">
               <CardContent className="p-4 md:p-6">
