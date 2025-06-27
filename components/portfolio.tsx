@@ -11,7 +11,7 @@ export function Portfolio() {
     {
       title: t("techExpo"),
       category: t("techExpoCategory"),
-      image: "/images/wooden-shelves-display.png",
+      image: "/images/Booth.webp	",
       tags: [t("interactive"), t("ledDisplays"), t("modernDesign")],
     },
     {
@@ -29,7 +29,7 @@ export function Portfolio() {
     {
       title: t("restaurantInterior"),
       category: t("restaurantInteriorCategory"),
-      image: "/images/Outdoor_ad.webp",
+      image: "/images/Interior.webp",
       tags: [t("interiorDesign"), t("atmosphere"), t("customFurniture")],
     },
     {
@@ -47,7 +47,7 @@ export function Portfolio() {
     {
       title: t("festivalStage"),
       category: t("festivalStageCategory"),
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/Stage.webp",
       tags: [t("largeScale"), t("themed"), t("stageTech")],
     },
   ]
