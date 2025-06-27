@@ -23,25 +23,25 @@ export function Portfolio() {
     {
       title: t("corporateEvent"),
       category: t("corporateEventCategory"),
-      image: "/images/Outdoor_ad.webp?height=300&width=400",
+      image: "/images/Event1.webp?height=300&width=400",
       tags: [t("stageDesign"), t("lighting"), t("branding")],
     },
     {
       title: t("restaurantInterior"),
       category: t("restaurantInteriorCategory"),
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/images/Outdoor_ad.webp",
       tags: [t("interiorDesign"), t("atmosphere"), t("customFurniture")],
     },
     {
       title: t("tradeBooth"),
       category: t("tradeBoothCategory"),
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/images/Booth2.webp",
       tags: [t("modular"), t("interactive"), t("productDisplay")],
     },
     {
       title: t("brandMaterials"),
       category: t("brandMaterialsCategory"),
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/images/Vinyl_Printing.webp",
       tags: [t("largeFormat"), t("vinyl"), t("promotional")],
     },
     {
