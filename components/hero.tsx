@@ -57,18 +57,24 @@ export function Hero() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto text-center relative z-10 px-4 h-full flex flex-col justify-center py-8 md:py-12">
+      <div className="container mx-auto text-center relative z-10 px-4 h-full flex flex-col justify-center py-2 md:py-4">
         <div className="max-w-7xl mx-auto">
-          {/* Logo - Moved 50% closer on mobile, 30% closer on desktop */}
+          {/* Logo - Moved closer to header with better sizing */}
           <div className="mb-3 md:mb-6 lg:mb-8 flex flex-col justify-center items-center">
             <div className="relative logo-container">
               <div className="relative flex flex-col items-center">
-                {/* Use complete logo with integrated "make it happen" */}
                 <img
-                  src="/images/now-logo-complete.png"
-                  alt="NOW - Make it happen"
+                  src="/images/now-logo-empty.png"
+                  alt="NOW Logo"
                   className="h-16 md:h-24 lg:h-40 w-auto drop-shadow-lg relative z-10"
                 />
+                <div className="absolute top-0 right-0 z-20">
+                  <img
+                    src="/images/make.png"
+                    alt="Make it happen"
+                    className="h-2.5 md:h-4 lg:h-7 w-auto animate-typing-reveal"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -119,6 +125,55 @@ export function Hero() {
           </div>
         </div>
       </div>
+
+      {/* Animations */}
+      <style jsx>{`
+        @keyframes typing-reveal {
+          0% {
+            opacity: 0;
+            clip-path: inset(0 100% 0 0);
+          }
+          100% {
+            opacity: 1;
+            clip-path: inset(0 0% 0 0);
+          }
+        }
+
+        .animate-typing-reveal {
+          animation: typing-reveal 3s ease-out forwards;
+          animation-delay: 1s;
+          animation-fill-mode: both;
+        }
+
+        /* Better proportional positioning for "make it happen" */
+        @media (min-width: 1280px) {
+          .animate-typing-reveal {
+            top: -0.5rem;
+            right: -0.75rem;
+          }
+        }
+
+        @media (max-width: 1279px) and (min-width: 1024px) {
+          .animate-typing-reveal {
+            top: -0.375rem;
+            right: -0.625rem;
+          }
+        }
+
+        @media (max-width: 1023px) and (min-width: 768px) {
+          .animate-typing-reveal {
+            top: -0.25rem;
+            right: -0.5rem;
+          }
+        }
+
+        @media (max-width: 767px) {
+          .animate-typing-reveal {
+            top: -0.125rem;
+            right: -0.25rem;
+          }
+        }
+      `}</style>
     </section>
   )
 }
