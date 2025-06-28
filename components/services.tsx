@@ -42,12 +42,7 @@ export function Services() {
       icon: PartyPopper,
       title: t("eventDecor"),
       description: t("eventDecorDesc"),
-      features: [
-        t("stageDesign"),
-        t("backdropCreation"),
-        t("lightingSetup"),
-        t("themedDecorations"),
-      ],
+      features: [t("stageDesign"), t("backdropCreation"), t("lightingSetup"), t("themedDecorations")],
       color: "text-purple-600",
       bgColor: "bg-purple-50",
     },
@@ -80,35 +75,17 @@ export function Services() {
       color: "text-indigo-600",
       bgColor: "bg-indigo-50",
     },
-    {
-      icon: ExternalLink,
-      title: t("marketingDesignServices"),
-      description: t("marketingDesignDesc"),
-      features: [
-        t("smm"),
-        t("seo"),
-        t("uiUxDesign"),
-        t("websiteCreation"),
-        t("branding"),
-        t("rebranding"),
-      ],
-      color: "text-green-600",
-      bgColor: "bg-green-50",
-    },
   ]
 
   return (
     <section id="services" className="py-12 md:py-20 px-4 bg-slate-50">
       <div className="container mx-auto">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            {t("servicesTitle")}
-          </h2>
-          <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
-            {t("servicesSubtitle")}
-          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">{t("servicesTitle")}</h2>
+          <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">{t("servicesSubtitle")}</p>
         </div>
 
+        {/* Mobile: 2 columns, Desktop: 3 columns */}
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {services.map((service, index) => (
             <Card
@@ -121,9 +98,7 @@ export function Services() {
                 >
                   <service.icon className={`h-4 w-4 md:h-6 md:w-6 lg:h-8 lg:w-8 ${service.color}`} />
                 </div>
-                <CardTitle className="text-slate-800 text-sm md:text-lg lg:text-xl">
-                  {service.title}
-                </CardTitle>
+                <CardTitle className="text-slate-800 text-sm md:text-lg lg:text-xl">{service.title}</CardTitle>
                 <CardDescription className="text-slate-600 text-xs md:text-sm lg:text-base">
                   {service.description}
                 </CardDescription>
