@@ -4,11 +4,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, Send } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
+import { COMPANY_INFO } from "@/lib/company-info"
 
 export function Contact() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+  const addressInfo = COMPANY_INFO.contact.address[language]
+  const workingHours = COMPANY_INFO.workingHours[language]
 
   return (
     <section id="contact" className="py-12 md:py-20 px-4">
@@ -32,6 +35,13 @@ export function Contact() {
                 action="https://formsubmit.co/nowyerevan@gmail.com"
                 method="POST"
                 className="space-y-4 md:space-y-6"
+                onSubmit={(e) => {
+                  setTimeout(() => {
+                    const form = e.target as HTMLFormElement
+                    form.reset()
+                    window.location.href = "/thanks"
+                  }, 100)
+                }}
               >
                 <div>
                   <Label htmlFor="name" className="text-slate-700 font-medium text-sm md:text-base">
@@ -82,15 +92,13 @@ export function Contact() {
                   />
                 </div>
 
-                {/* Optional: disable CAPTCHA */}
                 <input type="hidden" name="_captcha" value="false" />
-
-                {/* Optional: redirect to thank you page */}
                 <input type="hidden" name="_next" value="https://nowyerevan.am/thanks" />
+                <input type="hidden" name="_template" value="table" />
 
                 <button
                   type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 md:py-4 text-sm md:text-base font-medium flex items-center justify-center"
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 md:py-4 text-sm md:text-base font-medium flex items-center justify-center transition-colors duration-200"
                 >
                   <Send className="h-4 w-4 mr-2" />
                   {t("sendMessage")}
@@ -99,7 +107,6 @@ export function Contact() {
             </CardContent>
           </Card>
 
-          {/* Right side stays same */}
           <div className="space-y-4 md:space-y-6">
             <Card className="bg-white border-slate-200 shadow-lg">
               <CardContent className="p-4 md:p-6">
@@ -110,10 +117,10 @@ export function Contact() {
                   <div>
                     <h3 className="font-semibold text-slate-800 mb-2 text-sm md:text-base">{t("phone")}</h3>
                     <a
-                      href="tel:+37443454102"
+                      href={`tel:${COMPANY_INFO.contact.phone}`}
                       className="text-slate-600 hover:text-blue-600 transition-colors text-sm md:text-base"
                     >
-                      +374 43 454 102
+                      {COMPANY_INFO.contact.phone}
                     </a>
                   </div>
                 </div>
@@ -129,10 +136,10 @@ export function Contact() {
                   <div>
                     <h3 className="font-semibold text-slate-800 mb-2 text-sm md:text-base">{t("email")}</h3>
                     <a
-                      href="mailto:nowyerevan@gmail.com"
+                      href={`mailto:${COMPANY_INFO.contact.email}`}
                       className="text-slate-600 hover:text-blue-600 transition-colors text-sm md:text-base break-all"
                     >
-                      nowyerevan@gmail.com
+                      {COMPANY_INFO.contact.email}
                     </a>
                   </div>
                 </div>
@@ -147,8 +154,8 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-800 mb-2 text-sm md:text-base">{t("address")}</h3>
-                    <p className="text-slate-600 text-sm md:text-base">Yerevan, Armenia</p>
-                    <p className="text-slate-600 text-sm md:text-base">Tumanyan Street 15</p>
+                    <p className="text-slate-600 text-sm md:text-base">{addressInfo.city}</p>
+                    <p className="text-slate-600 text-sm md:text-base">{addressInfo.street}</p>
                   </div>
                 </div>
               </CardContent>
@@ -162,9 +169,9 @@ export function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-slate-800 mb-2 text-sm md:text-base">{t("workingHours")}</h3>
-                    <p className="text-slate-600 text-sm md:text-base">{t("mondayFriday")}</p>
-                    <p className="text-slate-600 text-sm md:text-base">{t("saturday")}</p>
-                    <p className="text-slate-600 text-sm md:text-base">{t("sunday")}</p>
+                    <p className="text-slate-600 text-sm md:text-base">{workingHours.mondayFriday}</p>
+                    <p className="text-slate-600 text-sm md:text-base">{workingHours.saturday}</p>
+                    <p className="text-slate-600 text-sm md:text-base">{workingHours.sunday}</p>
                   </div>
                 </div>
               </CardContent>

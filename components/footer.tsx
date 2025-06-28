@@ -2,9 +2,11 @@
 
 import { Facebook, Instagram, Linkedin, Youtube, Mail, Phone, MapPin } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
+import { COMPANY_INFO } from "@/lib/company-info"
 
 export function Footer() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
+  const addressInfo = COMPANY_INFO.contact.address[language]
 
   return (
     <footer className="bg-slate-900 text-white py-12 md:py-16">
@@ -23,7 +25,7 @@ export function Footer() {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://www.facebook.com/profile.php?id=61574513597283"
+                href={COMPANY_INFO.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-blue-400 cursor-pointer transition-colors"
@@ -32,7 +34,7 @@ export function Footer() {
                 <Facebook className="h-5 w-5 md:h-6 md:w-6" />
               </a>
               <a
-                href="https://www.instagram.com/now.evn/"
+                href={COMPANY_INFO.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-pink-400 cursor-pointer transition-colors"
@@ -40,18 +42,24 @@ export function Footer() {
               >
                 <Instagram className="h-5 w-5 md:h-6 md:w-6" />
               </a>
-              <button
+              <a
+                href={COMPANY_INFO.social.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-slate-400 hover:text-blue-400 cursor-pointer transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5 md:h-6 md:w-6" />
-              </button>
-              <button
+              </a>
+              <a
+                href={COMPANY_INFO.social.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-slate-400 hover:text-red-400 cursor-pointer transition-colors"
                 aria-label="YouTube"
               >
                 <Youtube className="h-5 w-5 md:h-6 md:w-6" />
-              </button>
+              </a>
             </div>
           </div>
 
@@ -85,7 +93,7 @@ export function Footer() {
               </li>
               <li>
                 <a href="#services" className="hover:text-white transition-colors">
-                  {t("printServices")}
+                  {t("digitalServices")}
                 </a>
               </li>
             </ul>
@@ -96,21 +104,24 @@ export function Footer() {
             <ul className="space-y-3 md:space-y-4 text-slate-300 text-sm md:text-base">
               <li className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-blue-400 flex-shrink-0" />
-                <a href="tel:+37443454102" className="hover:text-white transition-colors">
-                  +374 43 454 102
+                <a href={`tel:${COMPANY_INFO.contact.phone}`} className="hover:text-white transition-colors">
+                  {COMPANY_INFO.contact.phone}
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-blue-400 flex-shrink-0" />
-                <a href="mailto:nowyerevan@gmail.com" className="hover:text-white transition-colors break-all">
-                  nowyerevan@gmail.com
+                <a
+                  href={`mailto:${COMPANY_INFO.contact.email}`}
+                  className="hover:text-white transition-colors break-all"
+                >
+                  {COMPANY_INFO.contact.email}
                 </a>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-blue-400 flex-shrink-0 mt-1" />
                 <div>
-                  <div>{t("city")}</div>
-                  <div>{t("street")}</div>
+                  <div>{addressInfo.city}</div>
+                  <div>{addressInfo.street}</div>
                 </div>
               </li>
             </ul>
