@@ -24,8 +24,8 @@ export function Hero() {
   }
 
   return (
-    <section id="home" className="relative overflow-hidden min-h-[85vh] md:min-h-[90vh] pt-16 md:pt-20">
-      {/* Background Carousel */}
+    <section id="home" className="relative overflow-hidden min-h-[85vh] md:min-h-[90vh]" style={{ paddingTop: "50px" }}>
+      {/* Background Carousel with darker overlay */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
           <div
@@ -35,7 +35,7 @@ export function Hero() {
             }`}
           >
             <img src={slide || "/placeholder.svg"} alt="Background" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-white/60" />
+            <div className="absolute inset-0 bg-black/40" />
           </div>
         ))}
       </div>
@@ -48,7 +48,7 @@ export function Hero() {
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all duration-300 border-2 ${
               index === currentSlide
-                ? "bg-blue-600 border-blue-600 scale-125 shadow-lg"
+                ? "bg-yellow-400 border-yellow-400 scale-125 shadow-lg"
                 : "bg-white/60 border-white hover:bg-white/80 hover:border-white hover:scale-110"
             }`}
             aria-label={`Go to slide ${index + 1}`}
@@ -59,20 +59,20 @@ export function Hero() {
       {/* Main Content */}
       <div className="container mx-auto text-center relative z-10 px-4 h-full flex flex-col justify-center py-2 md:py-4">
         <div className="max-w-7xl mx-auto">
-          {/* Logo - Moved closer to header with better sizing */}
+          {/* Logo */}
           <div className="mb-3 md:mb-6 lg:mb-8 flex flex-col justify-center items-center">
             <div className="relative logo-container">
               <div className="relative flex flex-col items-center">
                 <img
                   src="/images/now-logo-empty.png"
                   alt="NOW Logo"
-                  className="h-16 md:h-24 lg:h-40 w-auto drop-shadow-lg relative z-10"
+                  className="h-16 md:h-24 lg:h-40 w-auto drop-shadow-lg relative z-10 filter brightness-0 invert"
                 />
                 <div className="absolute top-0 right-0 z-20">
                   <img
                     src="/images/make.png"
                     alt="Make it happen"
-                    className="h-2.5 md:h-4 lg:h-7 w-auto animate-typing-reveal"
+                    className="h-2.5 md:h-4 lg:h-7 w-auto animate-typing-reveal filter brightness-0 invert"
                   />
                 </div>
               </div>
@@ -81,21 +81,18 @@ export function Hero() {
 
           {/* Headline */}
           <div className="mb-3 md:mb-4 lg:mb-6">
-            <h1 className="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-slate-900 mb-3 md:mb-4 lg:mb-6 leading-tight px-2">
-              {t("heroTitle")}{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
-                {t("heroTitleHighlight")}
-              </span>
+            <h1 className="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-3 md:mb-4 lg:mb-6 leading-tight px-2">
+              {t("heroTitle")} <span className="text-yellow-400">{t("heroTitleHighlight")}</span>
               <br />
               {t("heroTitleEnd")}
             </h1>
             <div className="flex justify-center mb-3 md:mb-4 lg:mb-6">
-              <div className="w-8 md:w-12 lg:w-16 xl:w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
+              <div className="w-8 md:w-12 lg:w-16 xl:w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full" />
             </div>
           </div>
 
           {/* Subtitle */}
-          <p className="text-sm md:text-base lg:text-lg xl:text-xl text-slate-700 mb-4 md:mb-6 lg:mb-8 leading-relaxed max-w-4xl mx-auto font-medium px-4">
+          <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-200 mb-4 md:mb-6 lg:mb-8 leading-relaxed max-w-4xl mx-auto font-medium px-4">
             {t("heroSubtitle")}
           </p>
 
@@ -104,7 +101,7 @@ export function Hero() {
             <Link href="#contact" passHref>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 md:px-8 lg:px-10 py-3 md:py-4 lg:py-5 text-sm md:text-base lg:text-lg font-semibold shadow-xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
+                className="bg-yellow-400 hover:bg-yellow-500 text-black px-6 md:px-8 lg:px-10 py-3 md:py-4 lg:py-5 text-sm md:text-base lg:text-lg font-bold shadow-xl hover:shadow-yellow-400/25 transition-all duration-300 transform hover:scale-105"
               >
                 <Rocket className="mr-2 h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
                 {t("getStarted")}
@@ -116,7 +113,7 @@ export function Hero() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-slate-800 text-slate-800 hover:bg-slate-800 hover:text-white px-6 md:px-8 lg:px-10 py-3 md:py-4 lg:py-5 text-sm md:text-base lg:text-lg font-semibold transition-all duration-300 transform hover:scale-105 bg-white/80 backdrop-blur-sm"
+                className="border-2 border-white text-white hover:bg-white hover:text-black px-6 md:px-8 lg:px-10 py-3 md:py-4 lg:py-5 text-sm md:text-base lg:text-lg font-bold transition-all duration-300 transform hover:scale-105 bg-transparent backdrop-blur-sm"
               >
                 <Sparkles className="mr-2 h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
                 {t("viewWork")}

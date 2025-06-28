@@ -23,8 +23,8 @@ export function Services() {
       title: t("outdoorAd"),
       description: t("outdoorAdDesc"),
       features: [t("ledDisplays"), t("banners"), t("lightBoxes"), t("roofingMaterials")],
-      color: "text-red-600",
-      bgColor: "bg-red-50",
+      color: "text-black",
+      bgColor: "bg-gray-100",
       link: "/services/outdoor-advertising",
     },
     {
@@ -38,8 +38,8 @@ export function Services() {
         t("boothDesign"),
         t("installation"),
       ],
-      color: "text-blue-600",
-      bgColor: "bg-blue-50",
+      color: "text-yellow-600",
+      bgColor: "bg-yellow-50",
       link: "/services/expo-pavilions",
     },
     {
@@ -47,8 +47,8 @@ export function Services() {
       title: t("eventDecor"),
       description: t("eventDecorDesc"),
       features: [t("stageDesign"), t("backdropCreation"), t("lightingSetup"), t("themedDecorations")],
-      color: "text-purple-600",
-      bgColor: "bg-purple-50",
+      color: "text-black",
+      bgColor: "bg-gray-100",
       link: "/services/event-decoration",
     },
     {
@@ -63,8 +63,8 @@ export function Services() {
         t("brandEnvironments"),
         t("furniture"),
       ],
-      color: "text-orange-600",
-      bgColor: "bg-orange-50",
+      color: "text-yellow-600",
+      bgColor: "bg-yellow-50",
       link: "/services/commercial-design",
     },
     {
@@ -78,8 +78,8 @@ export function Services() {
         t("promotionalItems"),
         t("signage"),
       ],
-      color: "text-indigo-600",
-      bgColor: "bg-indigo-50",
+      color: "text-black",
+      bgColor: "bg-gray-100",
       link: "/services/printing",
     },
     {
@@ -94,18 +94,18 @@ export function Services() {
         t("branding"),
         t("rebranding"),
       ],
-      color: "text-emerald-600",
-      bgColor: "bg-emerald-50",
+      color: "text-yellow-600",
+      bgColor: "bg-yellow-50",
       link: "/services/digital-services",
     },
   ]
 
   return (
-    <section id="services" className="py-12 md:py-20 px-4 bg-slate-50">
+    <section id="services" className="py-12 md:py-20 px-4 bg-gray-50">
       <div className="container mx-auto">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">{t("servicesTitle")}</h2>
-          <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">{t("servicesSubtitle")}</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-4">{t("servicesTitle")}</h2>
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">{t("servicesSubtitle")}</p>
         </div>
 
         {/* Mobile: 2 columns, Desktop: 3 columns */}
@@ -113,7 +113,7 @@ export function Services() {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="bg-white border-slate-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="bg-white border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
             >
               <CardHeader className="pb-3 md:pb-4">
                 <div
@@ -121,21 +121,21 @@ export function Services() {
                 >
                   <service.icon className={`h-4 w-4 md:h-6 md:w-6 lg:h-8 lg:w-8 ${service.color}`} />
                 </div>
-                <CardTitle className="text-slate-800 text-sm md:text-lg lg:text-xl">{service.title}</CardTitle>
-                <CardDescription className="text-slate-600 text-xs md:text-sm lg:text-base">
+                <CardTitle className="text-black text-sm md:text-lg lg:text-xl">{service.title}</CardTitle>
+                <CardDescription className="text-gray-600 text-xs md:text-sm lg:text-base">
                   {service.description}
                 </CardDescription>
               </CardHeader>
               <CardContent className="pt-0">
                 <ul className="space-y-1 md:space-y-2 lg:space-y-3">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-slate-700">
-                      <CheckCircle className="w-2.5 h-2.5 md:w-3 md:h-3 lg:w-4 lg:h-4 text-green-500 mr-1.5 md:mr-2 lg:mr-3 flex-shrink-0" />
+                    <li key={featureIndex} className="flex items-center text-gray-700">
+                      <CheckCircle className="w-2.5 h-2.5 md:w-3 md:h-3 lg:w-4 lg:h-4 text-yellow-500 mr-1.5 md:mr-2 lg:mr-3 flex-shrink-0" />
                       <span className="text-xs md:text-xs lg:text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <div className="mt-3 md:mt-4 lg:mt-6 pt-2 md:pt-3 lg:pt-4 border-t border-slate-100">
+                <div className="mt-3 md:mt-4 lg:mt-6 pt-2 md:pt-3 lg:pt-4 border-t border-gray-100">
                   <Link href={service.link}>
                     <button
                       className={`flex items-center text-xs md:text-xs lg:text-sm font-medium ${service.color} hover:underline`}

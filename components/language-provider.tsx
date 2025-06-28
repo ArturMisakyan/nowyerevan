@@ -24,11 +24,11 @@ const translations = {
     contact: "Կապ",
 
     // Hero
-    heroTitle: "Ստեղծեք",
-    heroTitleHighlight: "Անմոռանալի",
-    heroTitleEnd: "Տպավորություն",
+    heroTitle: "Բերեք",
+    heroTitleHighlight: "Գաղափարները",
+    heroTitleEnd: "Կյանք NOW",
     heroSubtitle:
-      "Տեսլականից դեպի իրականություն - Մենք մասնագիտացված ենք գովազդային և դեկորատիվ լուծումների մեջ՝ արտաքին գովազդից մինչև էքսպո պավիլիոններ և առևտրային տարածքների ձևավորում:",
+      "Տեսլականից դեպի իրականություն – Մենք մասնագիտացված ենք գովազդային և դեկորատիվ լուծումների մեջ՝ արտաքին գովազդից մինչև էքսպո պավիլիոններ և առևտրային տարածքների ձևավորում:",
     getStarted: "Սկսել նախագիծը",
     viewWork: "Դիտել աշխատանքները",
 
@@ -240,9 +240,9 @@ const translations = {
     contact: "Contact",
 
     // Hero
-    heroTitle: "Createe",
-    heroTitleHighlight: "Unforgettable",
-    heroTitleEnd: "Experiences",
+    heroTitle: "Bring",
+    heroTitleHighlight: "Ideas",
+    heroTitleEnd: "to Life NOW",
     heroSubtitle:
       "From Vision to Reality – We are specialized in advertising and decorative solutions, from outdoor advertising to expo pavilions and commercial space design.",
     getStarted: "Get Started",
@@ -454,9 +454,9 @@ const translations = {
     contact: "Контакты",
 
     // Hero
-    heroTitle: "Создавайте",
-    heroTitleHighlight: "Незабываемые",
-    heroTitleEnd: "Впечатления",
+    heroTitle: "Воплощайте",
+    heroTitleHighlight: "Идеи",
+    heroTitleEnd: "в Жизнь NOW",
     heroSubtitle:
       "От видения к реальности – Мы специализируемся на рекламных и декоративных решениях: от наружной рекламы до экспо-павильонов и оформления коммерческих пространств.",
     getStarted: "Начать проект",
