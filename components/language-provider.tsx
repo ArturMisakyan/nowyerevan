@@ -240,7 +240,7 @@ const translations = {
     contact: "Contact",
 
     // Hero
-    heroTitle: "Create",
+    heroTitle: "Createe",
     heroTitleHighlight: "Unforgettable",
     heroTitleEnd: "Experiences",
     heroSubtitle:
