@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, CheckCircle, Star, Users, Zap } from "lucide-react"
 import Link from "next/link"
 
-function OutdoorAdvertisingContent() {
+function EventDecorationContent() {
   const { t } = useLanguage()
 
   const features = [
@@ -31,12 +31,12 @@ function OutdoorAdvertisingContent() {
   ]
 
   const services = [
-    t("ledDisplays"),
-    t("banners"),
-    t("lightBoxes"),
-    t("roofingMaterials"),
-    t("digitalScreens"),
-    t("signage"),
+    t("stageDesign"),
+    t("backdropCreation"),
+    t("lightingSetup"),
+    t("themedDecorations"),
+    t("branding"),
+    t("atmosphere"),
   ]
 
   return (
@@ -55,8 +55,8 @@ function OutdoorAdvertisingContent() {
             <Badge variant="secondary" className="mb-4">
               {t("services")}
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">{t("outdoorAd")}</h1>
-            <p className="text-xl text-slate-600 mb-8 leading-relaxed">{t("outdoorAdDesc")}</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">{t("eventDecor")}</h1>
+            <p className="text-xl text-slate-600 mb-8 leading-relaxed">{t("eventDecorDesc")}</p>
           </div>
         </div>
       </section>
@@ -86,8 +86,8 @@ function OutdoorAdvertisingContent() {
             {features.map((feature, index) => (
               <Card key={index} className="text-center">
                 <CardHeader>
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="w-8 h-8 text-blue-600" />
+                  <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="w-8 h-8 text-purple-600" />
                   </div>
                   <CardTitle>{feature.title}</CardTitle>
                 </CardHeader>
@@ -108,7 +108,7 @@ function OutdoorAdvertisingContent() {
               <h2 className="text-2xl font-bold mb-4">{t("readyToStart")}</h2>
               <p className="text-slate-600 mb-6">{t("contactUsToday")}</p>
               <Link href="/#contact">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
                   {t("getStarted")}
                 </Button>
               </Link>
@@ -122,10 +122,10 @@ function OutdoorAdvertisingContent() {
   )
 }
 
-export default function OutdoorAdvertisingPage() {
+export default function EventDecorationPage() {
   return (
     <LanguageProvider>
-      <OutdoorAdvertisingContent />
+      <EventDecorationContent />
     </LanguageProvider>
   )
 }

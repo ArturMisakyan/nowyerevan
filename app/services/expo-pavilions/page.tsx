@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowLeft, CheckCircle, Star, Users, Zap } from "lucide-react"
 import Link from "next/link"
 
-function OutdoorAdvertisingContent() {
+function ExpoPavilionsContent() {
   const { t } = useLanguage()
 
   const features = [
@@ -31,12 +31,12 @@ function OutdoorAdvertisingContent() {
   ]
 
   const services = [
-    t("ledDisplays"),
-    t("banners"),
-    t("lightBoxes"),
-    t("roofingMaterials"),
-    t("digitalScreens"),
-    t("signage"),
+    t("customPavilions"),
+    t("modularSystems"),
+    t("interactiveDisplays"),
+    t("boothDesign"),
+    t("installation"),
+    t("branding"),
   ]
 
   return (
@@ -55,8 +55,8 @@ function OutdoorAdvertisingContent() {
             <Badge variant="secondary" className="mb-4">
               {t("services")}
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">{t("outdoorAd")}</h1>
-            <p className="text-xl text-slate-600 mb-8 leading-relaxed">{t("outdoorAdDesc")}</p>
+            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">{t("expoPavilions")}</h1>
+            <p className="text-xl text-slate-600 mb-8 leading-relaxed">{t("expoPavilionsDesc")}</p>
           </div>
         </div>
       </section>
@@ -122,10 +122,10 @@ function OutdoorAdvertisingContent() {
   )
 }
 
-export default function OutdoorAdvertisingPage() {
+export default function ExpoPavilionsPage() {
   return (
     <LanguageProvider>
-      <OutdoorAdvertisingContent />
+      <ExpoPavilionsContent />
     </LanguageProvider>
   )
 }
