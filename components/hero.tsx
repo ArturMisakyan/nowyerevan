@@ -24,7 +24,7 @@ export function Hero() {
   }
 
   return (
-    <section id="home" className="relative overflow-hidden min-h-[85vh] md:min-h-[90vh] pt-16 md:pt-20">
+    <section id="home" className="relative overflow-hidden min-h-screen pt-12 md:pt-24">
       {/* Background Carousel */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
@@ -57,22 +57,23 @@ export function Hero() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto text-center relative z-10 px-4 h-full flex flex-col justify-center py-8 md:py-12">
+      <div className="container mx-auto text-center relative z-10 px-4">
         <div className="max-w-7xl mx-auto">
+
           {/* Logo */}
-          <div className="mb-3 md:mb-4 lg:mb-6 flex flex-col justify-center items-center">
+          <div className="mb-6 md:mb-8 lg:mb-12 flex flex-col justify-center items-center">
             <div className="relative logo-container">
               <div className="relative flex flex-col items-center">
                 <img
                   src="/images/now-logo-empty.png"
                   alt="NOW Logo"
-                  className="h-8 md:h-16 lg:h-24 w-auto drop-shadow-lg relative z-10"
+                  className="h-16 md:h-24 lg:h-40 w-auto drop-shadow-lg relative z-10"
                 />
                 <div className="absolute top-0 right-0 z-20">
                   <img
                     src="/images/make.png"
                     alt="Make it happen"
-                    className="h-1.5 md:h-2.5 lg:h-4 w-auto animate-typing-reveal"
+                    className="h-2.5 md:h-4 lg:h-7 w-auto animate-typing-reveal"
                   />
                 </div>
               </div>
@@ -80,8 +81,8 @@ export function Hero() {
           </div>
 
           {/* Headline */}
-          <div className="mb-2 md:mb-3 lg:mb-4">
-            <h1 className="text-lg md:text-2xl lg:text-4xl xl:text-5xl font-bold text-slate-900 mb-2 md:mb-3 lg:mb-4 leading-tight px-2">
+          <div className="mb-4 md:mb-6 lg:mb-8">
+            <h1 className="text-2xl md:text-4xl lg:text-7xl font-bold text-slate-900 mb-3 md:mb-4 lg:mb-6 leading-tight px-2">
               {t("heroTitle")}{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                 {t("heroTitleHighlight")}
@@ -89,36 +90,36 @@ export function Hero() {
               <br />
               {t("heroTitleEnd")}
             </h1>
-            <div className="flex justify-center mb-2 md:mb-3 lg:mb-4">
-              <div className="w-6 md:w-10 lg:w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
+            <div className="flex justify-center mb-3 md:mb-4 lg:mb-6">
+              <div className="w-12 md:w-16 lg:w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full" />
             </div>
           </div>
 
           {/* Subtitle */}
-          <p className="text-xs md:text-sm lg:text-lg xl:text-xl text-slate-700 mb-3 md:mb-4 lg:mb-6 leading-relaxed max-w-4xl mx-auto font-medium px-4">
+          <p className="text-base md:text-lg lg:text-2xl text-slate-700 mb-6 md:mb-8 lg:mb-12 leading-relaxed max-w-5xl mx-auto font-medium px-4">
             {t("heroSubtitle")}
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-2 md:gap-3 lg:gap-4 justify-center px-4">
-            <Link href="#contact" passHref>
+          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 lg:gap-6 justify-center mb-8 md:mb-12 lg:mb-16 px-4">
+            <Link href="https://nowyerevan.am/#contact" passHref>
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 text-sm md:text-base lg:text-lg font-semibold shadow-xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-6 md:px-8 lg:px-12 py-3 md:py-4 lg:py-6 text-base md:text-lg lg:text-xl font-semibold shadow-xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
               >
-                <Rocket className="mr-2 h-3 w-3 md:h-4 md:w-4 lg:h-5 lg:w-5" />
+                <Rocket className="mr-2 h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
                 {t("getStarted")}
-                <ArrowRight className="ml-2 h-3 w-3 md:h-4 md:w-4 lg:h-5 lg:w-5" />
+                <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
               </Button>
             </Link>
 
-            <Link href="#portfolio" passHref>
+            <Link href="https://nowyerevan.am/#portfolio" passHref>
               <Button
                 variant="outline"
                 size="lg"
-                className="border-2 border-slate-800 text-slate-800 hover:bg-slate-800 hover:text-white px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 text-sm md:text-base lg:text-lg font-semibold transition-all duration-300 transform hover:scale-105 bg-white/80 backdrop-blur-sm"
+                className="border-2 border-slate-800 text-slate-800 hover:bg-slate-800 hover:text-white px-6 md:px-8 lg:px-12 py-3 md:py-4 lg:py-6 text-base md:text-lg lg:text-xl font-semibold transition-all duration-300 transform hover:scale-105 bg-white/80 backdrop-blur-sm"
               >
-                <Sparkles className="mr-2 h-3 w-3 md:h-4 md:w-4 lg:h-5 lg:w-5" />
+                <Sparkles className="mr-2 h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
                 {t("viewWork")}
               </Button>
             </Link>

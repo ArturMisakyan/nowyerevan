@@ -51,9 +51,6 @@ const translations = {
     printServices: "Տպագրական ծառայություններ",
     printServicesDesc: "Բարձրորակ տպագրություն գովազդային նյութերի և պրոմո արտադրանքի համար",
 
-    digitalServices: "Թվային ծառայություններ",
-    digitalServicesDesc: "SMM, SEO, UI/UX դիզայն, կայքերի ստեղծում, բրենդինգ և ռեբրենդինգ",
-
     // Portfolio
     portfolioTitle: "Պորտֆոլիո",
     portfolioSubtitle: "Մեր վերջին նախագծերը վկայում են մեկ բան՝ եթե կարելի է պատկերացնել, ուրեմն կարելի է իրականացնել",
@@ -68,14 +65,17 @@ const translations = {
     corporateEvent: "Կորպորատիվ Միջոցառման Ձևավորում",
     corporateEventCategory: "Միջոցառումների Դեկոր",
 
-    restaurantInterior: "Շքեղ Ռեստորանի Ձևավորում",
-    restaurantInteriorCategory: "Պրեմիում Հյուրանոցային Ինտերիերներ",
+    restaurantInterior: "Ռեստորանի Ինտերիեր",
+    restaurantInteriorCategory: "Առևտրային Դեկոր",
 
-    displayStands: "Մասնագիտական Ցուցադրական Կանգառներ",
-    displayStandsCategory: "Մոդուլային Ցուցադրական Լուծումներ",
+    tradeBooth: "Առևտրային Ցուցահանդեսի Կանգառ",
+    tradeBoothCategory: "Էքսպո Պավիլիոններ",
 
     brandMaterials: "Բրենդային Գովազդային Նյութեր",
     brandMaterialsCategory: "Տպագրական Ծառայություններ",
+
+    festivalStage: "Փառատոնի Հիմնական Բեմ",
+    festivalStageCategory: "Միջոցառումների Դեկոր",
 
     // Portfolio Tags
     interactive: "Ինտերակտիվ",
@@ -94,8 +94,7 @@ const translations = {
     promotional: "Գովազդային",
     largeScale: "Լայն Մասշտաբ",
     themed: "Թեմատիկ",
-    portable: "Շարժական",
-    versatile: "Բազմակողմանի",
+    stageTech: "Բեմական Տեխնոլոգիա",
 
     // About
     aboutTitle: "Մեր Մասին",
@@ -143,7 +142,6 @@ const translations = {
     workingHours: "Աշխատանքային ժամեր",
     mondayFriday: "Երկուշաբթի - Ուրբաթ: 9:00 - 18:00",
     saturday: "Շաբաթ: 10:00 - 16:00",
-    sunday: "Կիրակի: Փակ",
     address: "Հասցե",
 
     // Service Features
@@ -176,19 +174,11 @@ const translations = {
     promotionalItems: "Գովազդային իրեր",
     signage: "Ցուցանակներ",
 
-    // Digital Services
-    smmManagement: "SMM կառավարում",
-    smmManagementDesc: "Սոցիալական ցանցերի մասնագիտական կառավարում և բովանդակության ստեղծում",
-    seoOptimization: "SEO օպտիմիզացում",
-    seoOptimizationDesc: "Որոնողական համակարգերում ձեր կայքի տեսանելիության բարելավում",
-    uiuxDesign: "UI/UX դիզայն",
-    uiuxDesignDesc: "Օգտատերերի փորձառության և ինտերֆեյսի նորարարական դիզայն",
-    websiteDevelopment: "Կայքերի ստեղծում",
-    websiteDevelopmentDesc: "Ժամանակակից և արձագանքող կայքերի մշակում",
-    brandingDesc: "Բրենդի ինքնության և տեսողական ոճի ստեղծում",
-    rebrandingDesc: "Գոյություն ունեցող բրենդների թարմացում և վերանորոգում",
-
     learnMore: "Իմանալ ավելին",
+
+    // Contact Information
+    city: "Երևան, Հայաստան",
+    street: "Թումանյան փողոց 15",
 
     promoStands: "Գովազդային կանգառներ",
 
@@ -207,25 +197,6 @@ const translations = {
     collaborationDesc: "Սերտ աշխատանք հաճախորդների հետ՝ գերազանցելու սպասելիքները",
 
     selectLanguage: "Ընտրել լեզուն",
-
-    thankYouTitle: "Շնորհակալություն!",
-    thankYouMessage:
-      "Մենք ստացել ենք ձեր հաղորդագրությունը և 24 ժամվա ընթացքում կպատասխանենք ձեզ: Մեր թիմը հուզված է քննարկել ձեր նախագիծը:",
-    backToHome: "Վերադառնալ գլխավոր էջ",
-
-    // Coming Soon
-    comingSoonTitle: "Շուտով",
-    comingSoonMessage: "Մենք աշխատում ենք այս էջի վրա: Շուտով այն կլինի պատրաստ:",
-    stayTuned: "Մնացեք մեզ հետ",
-
-    // Service Pages
-    whatWeOffer: "Ինչ ենք առաջարկում",
-    whyChooseUs: "Ինչու՞ ընտրել մեզ",
-    readyToStart: "Պատրա՞ստ եք սկսել",
-    contactUsToday: "Կապվեք մեզ հետ այսօր",
-    ourDigitalServices: "Մեր թվային ծառայությունները",
-    readyToGrowOnline: "Պատրա՞ստ եք աճել օնլայնում",
-    letUsHelpYou: "Թույլ տվեք մեզ օգնել ձեզ",
   },
   en: {
     // Company
@@ -267,9 +238,6 @@ const translations = {
     printServices: "Printing Services",
     printServicesDesc: "High-quality printing for advertising materials and promotional products",
 
-    digitalServices: "Digital Services",
-    digitalServicesDesc: "SMM, SEO, UI/UX design, website development, branding and rebranding",
-
     // Portfolio
     portfolioTitle: "Portfolio",
     portfolioSubtitle: "Our latest projects prove one thing: if it can be imagined, it can be made real",
@@ -284,14 +252,17 @@ const translations = {
     corporateEvent: "Corporate Event Design",
     corporateEventCategory: "Event Decoration",
 
-    restaurantInterior: "Luxury Restaurant Design",
-    restaurantInteriorCategory: "Premium Hospitality Interiors",
+    restaurantInterior: "Restaurant Interior",
+    restaurantInteriorCategory: "Commercial Decor",
 
-    displayStands: "Professional Display Stands",
-    displayStandsCategory: "Modular Display Solutions",
+    tradeBooth: "Trade Show Booth",
+    tradeBoothCategory: "Expo Pavilions",
 
     brandMaterials: "Brand Advertising Materials",
     brandMaterialsCategory: "Printing Services",
+
+    festivalStage: "Festival Main Stage",
+    festivalStageCategory: "Event Decoration",
 
     // Portfolio Tags
     interactive: "Interactive",
@@ -310,8 +281,7 @@ const translations = {
     promotional: "Promotional",
     largeScale: "Large Scale",
     themed: "Themed",
-    portable: "Portable",
-    versatile: "Versatile",
+    stageTech: "Stage Tech",
 
     // About
     aboutTitle: "About Us",
@@ -358,7 +328,6 @@ const translations = {
     workingHours: "Working Hours",
     mondayFriday: "Monday - Friday: 9:00 - 18:00",
     saturday: "Saturday: 10:00 - 16:00",
-    sunday: "Sunday: Closed",
     address: "Address",
 
     // Service Features
@@ -391,19 +360,11 @@ const translations = {
     promotionalItems: "Promotional Items",
     signage: "Signage",
 
-    // Digital Services
-    smmManagement: "SMM Management",
-    smmManagementDesc: "Professional social media management and content creation",
-    seoOptimization: "SEO Optimization",
-    seoOptimizationDesc: "Improve your website's visibility in search engines",
-    uiuxDesign: "UI/UX Design",
-    uiuxDesignDesc: "Innovative user experience and interface design",
-    websiteDevelopment: "Website Development",
-    websiteDevelopmentDesc: "Modern and responsive website development",
-    brandingDesc: "Creating brand identity and visual style",
-    rebrandingDesc: "Refreshing and updating existing brands",
-
     learnMore: "Learn More",
+
+    // Contact Information
+    city: "Yerevan, Armenia",
+    street: "Tumanyan Street 15",
 
     promoStands: "Promotional Stands",
 
@@ -421,25 +382,6 @@ const translations = {
     collaborationDesc: "Working closely with clients to exceed expectations",
 
     selectLanguage: "Select Language",
-
-    thankYouTitle: "Thank You!",
-    thankYouMessage:
-      "We've received your message and will get back to you within 24 hours. Our team is excited to discuss your project!",
-    backToHome: "Back to Homepage",
-
-    // Coming Soon
-    comingSoonTitle: "Coming Soon",
-    comingSoonMessage: "We're working on this page. It will be ready soon!",
-    stayTuned: "Stay Tuned",
-
-    // Service Pages
-    whatWeOffer: "What We Offer",
-    whyChooseUs: "Why Choose Us",
-    readyToStart: "Ready to Start?",
-    contactUsToday: "Contact us today",
-    ourDigitalServices: "Our Digital Services",
-    readyToGrowOnline: "Ready to Grow Online?",
-    letUsHelpYou: "Let us help you succeed",
   },
   ru: {
     // Company
@@ -481,9 +423,6 @@ const translations = {
     printServices: "Полиграфические услуги",
     printServicesDesc: "Высококачественная печать рекламных материалов и промо продукции",
 
-    digitalServices: "Цифровые услуги",
-    digitalServicesDesc: "SMM, SEO, UI/UX дизайн, создание сайтов, брендинг и ребрендинг",
-
     // Portfolio
     portfolioTitle: "Портфолио",
     portfolioSubtitle:
@@ -499,14 +438,17 @@ const translations = {
     corporateEvent: "Дизайн Корпоративного Мероприятия",
     corporateEventCategory: "Декор Мероприятий",
 
-    restaurantInterior: "Дизайн Роскошного Ресторана",
-    restaurantInteriorCategory: "Премиум Интерьеры Гостеприимства",
+    restaurantInterior: "Интерьер Ресторана",
+    restaurantInteriorCategory: "Коммерческий Декор",
 
-    displayStands: "Профессиональные Выставочные Стенды",
-    displayStandsCategory: "Модульные Демонстрационные Решения",
+    tradeBooth: "Стенд Торговой Выставки",
+    tradeBoothCategory: "Экспо Павильоны",
 
     brandMaterials: "Брендовые Рекламные Материалы",
     brandMaterialsCategory: "Полиграфические Услуги",
+
+    festivalStage: "Главная Сцена Фестиваля",
+    festivalStageCategory: "Декор Мероприятий",
 
     // Portfolio Tags
     interactive: "Интерактивный",
@@ -525,8 +467,7 @@ const translations = {
     promotional: "Рекламный",
     largeScale: "Крупномасштабный",
     themed: "Тематический",
-    portable: "Портативный",
-    versatile: "Универсальный",
+    stageTech: "Сценические Технологии",
 
     // About
     aboutTitle: "О нас",
@@ -573,7 +514,6 @@ const translations = {
     workingHours: "Рабочие часы",
     mondayFriday: "Понедельник - Пятница: 9:00 - 18:00",
     saturday: "Суббота: 10:00 - 16:00",
-    sunday: "Воскресенье: Закрыто",
     address: "Адрес",
 
     // Service Features
@@ -606,19 +546,11 @@ const translations = {
     promotionalItems: "Рекламные товары",
     signage: "Вывески",
 
-    // Digital Services
-    smmManagement: "SMM управление",
-    smmManagementDesc: "Профессиональное управление социальными сетями и создание контента",
-    seoOptimization: "SEO оптимизация",
-    seoOptimizationDesc: "Улучшение видимости вашего сайта в поисковых системах",
-    uiuxDesign: "UI/UX дизайн",
-    uiuxDesignDesc: "Инновационный дизайн пользовательского опыта и интерфейса",
-    websiteDevelopment: "Создание сайтов",
-    websiteDevelopmentDesc: "Разработка современных и адаптивных веб-сайтов",
-    brandingDesc: "Создание фирменного стиля и визуальной идентичности",
-    rebrandingDesc: "Обновление и модернизация существующих брендов",
-
     learnMore: "Узнать больше",
+
+    // Contact Information
+    city: "Ереван, Армения",
+    street: "Улица Туманяна 15",
 
     promoStands: "Рекламные стенды",
 
@@ -636,25 +568,6 @@ const translations = {
     collaborationDesc: "Тесная работа с клиентами для превышения ожиданий",
 
     selectLanguage: "Выбрать язык",
-
-    thankYouTitle: "Спасибо!",
-    thankYouMessage:
-      "Мы получили ваше сообщение и свяжемся с вами в течение 24 часов. Наша команда рада обсудить ваш проект!",
-    backToHome: "Вернуться на главную",
-
-    // Coming Soon
-    comingSoonTitle: "Скоро",
-    comingSoonMessage: "Мы работаем над этой страницей. Скоро она будет готова!",
-    stayTuned: "Следите за обновлениями",
-
-    // Service Pages
-    whatWeOffer: "Что мы предлагаем",
-    whyChooseUs: "Почему выбирают нас",
-    readyToStart: "Готовы начать?",
-    contactUsToday: "Свяжитесь с нами сегодня",
-    ourDigitalServices: "Наши цифровые услуги",
-    readyToGrowOnline: "Готовы расти онлайн?",
-    letUsHelpYou: "Позвольте нам помочь вам",
   },
 }
 
