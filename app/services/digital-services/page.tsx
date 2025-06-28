@@ -50,15 +50,18 @@ function DigitalServicesContent() {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-24 pb-12 px-4">
+      <section className="pt-20 md:pt-24 pb-12 px-4">
         <div className="container mx-auto">
-          <Link href="/" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6">
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            {t("backToHome")}
+          <Link
+            href="/"
+            className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-8 group transition-all duration-200 hover:translate-x-1"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2 transition-transform group-hover:-translate-x-1" />
+            <span className="font-medium">{t("backToHome")}</span>
           </Link>
 
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-4">
+            <Badge variant="secondary" className="mb-4 px-4 py-2 text-sm font-medium">
               {t("services")}
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">{t("digitalServices")}</h1>

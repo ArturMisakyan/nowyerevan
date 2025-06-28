@@ -28,9 +28,9 @@ function ComingSoonContent() {
         <Link href="/" passHref>
           <Button
             size="lg"
-            className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
+            className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 group"
           >
-            <ArrowLeft className="mr-2 h-5 w-5" />
+            <ArrowLeft className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1" />
             {t("backToHome")}
           </Button>
         </Link>

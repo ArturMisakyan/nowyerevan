@@ -49,7 +49,9 @@ export function Services() {
       features: [t("stageDesign"), t("backdropCreation"), t("lightingSetup"), t("themedDecorations")],
       color: "text-purple-600",
       bgColor: "bg-purple-50",
-      link: "/services/event-decoration",
+      link: "/coming-soon",
+//      link: "/services/event-decoration",
+
     },
     {
       icon: Store,
