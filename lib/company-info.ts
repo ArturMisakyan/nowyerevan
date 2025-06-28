@@ -4,7 +4,7 @@ export const COMPANY_INFO = {
   slogan: "Make it happen NOW",
 
   contact: {
-    phone: "+374 43 45 41 02",
+    phone: "+374(43) 45-41-02",
     email: "nowyerevan@gmail.com",
 
     // Addresses in different languages
