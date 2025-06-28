@@ -39,7 +39,7 @@ export function Contact() {
                   </Label>
                   <Input
                     id="name"
-                    name="name"
+                    name="Name"
                     required
                     className="mt-2 border-slate-200 focus:border-blue-500 focus:ring-blue-500 h-10 md:h-11"
                   />
@@ -51,7 +51,7 @@ export function Contact() {
                   </Label>
                   <Input
                     id="email"
-                    name="email"
+                    name="Email"
                     type="email"
                     required
                     className="mt-2 border-slate-200 focus:border-blue-500 focus:ring-blue-500 h-10 md:h-11"
@@ -64,7 +64,7 @@ export function Contact() {
                   </Label>
                   <Input
                     id="phone"
-                    name="trubka"
+                    name="Phone"
                     className="mt-2 border-slate-200 focus:border-blue-500 focus:ring-blue-500 h-10 md:h-11"
                   />
                 </div>
@@ -75,7 +75,7 @@ export function Contact() {
                   </Label>
                   <Textarea
                     id="message"
-                    name="message"
+                    name="Message"
                     rows={4}
                     required
                     className="mt-2 border-slate-200 focus:border-blue-500 focus:ring-blue-500 resize-none"
