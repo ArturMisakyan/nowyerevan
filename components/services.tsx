@@ -9,8 +9,10 @@ import {
   Printer,
   ExternalLink,
   CheckCircle,
+  Globe,
 } from "lucide-react"
 import { useLanguage } from "@/components/language-provider"
+import Link from "next/link"
 
 export function Services() {
   const { t } = useLanguage()
@@ -23,6 +25,7 @@ export function Services() {
       features: [t("ledDisplays"), t("banners"), t("lightBoxes"), t("roofingMaterials")],
       color: "text-red-600",
       bgColor: "bg-red-50",
+      link: "/services/outdoor-advertising",
     },
     {
       icon: Building,
@@ -37,6 +40,7 @@ export function Services() {
       ],
       color: "text-blue-600",
       bgColor: "bg-blue-50",
+      link: "/services/expo-pavilions",
     },
     {
       icon: PartyPopper,
@@ -45,6 +49,7 @@ export function Services() {
       features: [t("stageDesign"), t("backdropCreation"), t("lightingSetup"), t("themedDecorations")],
       color: "text-purple-600",
       bgColor: "bg-purple-50",
+      link: "/services/event-decoration",
     },
     {
       icon: Store,
@@ -60,6 +65,7 @@ export function Services() {
       ],
       color: "text-orange-600",
       bgColor: "bg-orange-50",
+      link: "/services/commercial-design",
     },
     {
       icon: Printer,
@@ -74,6 +80,23 @@ export function Services() {
       ],
       color: "text-indigo-600",
       bgColor: "bg-indigo-50",
+      link: "/services/printing",
+    },
+    {
+      icon: Globe,
+      title: t("digitalServices"),
+      description: t("digitalServicesDesc"),
+      features: [
+        t("smmManagement"),
+        t("seoOptimization"),
+        t("uiuxDesign"),
+        t("websiteDevelopment"),
+        t("branding"),
+        t("rebranding"),
+      ],
+      color: "text-emerald-600",
+      bgColor: "bg-emerald-50",
+      link: "/services/digital-services",
     },
   ]
 
@@ -113,12 +136,14 @@ export function Services() {
                   ))}
                 </ul>
                 <div className="mt-3 md:mt-4 lg:mt-6 pt-2 md:pt-3 lg:pt-4 border-t border-slate-100">
-                  <button
-                    className={`flex items-center text-xs md:text-xs lg:text-sm font-medium ${service.color} hover:underline`}
-                  >
-                    {t("learnMore")}
-                    <ExternalLink className="w-2.5 h-2.5 md:w-3 md:h-3 lg:w-4 lg:h-4 ml-1" />
-                  </button>
+                  <Link href={service.link}>
+                    <button
+                      className={`flex items-center text-xs md:text-xs lg:text-sm font-medium ${service.color} hover:underline`}
+                    >
+                      {t("learnMore")}
+                      <ExternalLink className="w-2.5 h-2.5 md:w-3 md:h-3 lg:w-4 lg:h-4 ml-1" />
+                    </button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
