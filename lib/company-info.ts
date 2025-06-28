@@ -4,7 +4,7 @@ export const COMPANY_INFO = {
   slogan: "Make it happen NOW",
 
   contact: {
-    phone: "+374 43 454 102",
+    phone: "+374 43 45 41 02",
     email: "nowyerevan@gmail.com",
 
     // Addresses in different languages
@@ -30,8 +30,8 @@ export const COMPANY_INFO = {
   social: {
     facebook: "https://www.facebook.com/profile.php?id=61574513597283",
     instagram: "https://www.instagram.com/now.evn/",
-    linkedin: "#", // Add when available
-    youtube: "#", // Add when available
+    linkedin: " ", // Add when available
+    youtube: " ", // Add when available
   },
 
   workingHours: {
