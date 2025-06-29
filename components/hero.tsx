@@ -10,7 +10,7 @@ export function Hero() {
   const { t } = useLanguage()
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  const slides = ["/images/gray-background.jpg", "/images/gray-background.jpg"]
+  const slides = ["/images/Event1.webp", "/images/Event2.webp", "/images/Exhibition Booth.webp"]
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -24,8 +24,8 @@ export function Hero() {
   }
 
   return (
-    <section id="home" className="relative overflow-hidden min-h-[85vh] md:min-h-[90vh]" style={{ paddingTop: "50px" }}>
-      {/* Background Carousel with darker overlay */}
+    <section id="home" className="relative overflow-hidden above-fold">
+      {/* Background Carousel with configurable overlay */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
           <div
@@ -35,20 +35,21 @@ export function Hero() {
             }`}
           >
             <img src={slide || "/placeholder.svg"} alt="Background" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/40" />
           </div>
         ))}
+        {/* Configurable overlay */}
+        <div className="absolute inset-0 bg-black" style={{ opacity: "var(--overlay-opacity, 0.3)" }} />
       </div>
 
       {/* Carousel Dots */}
-      <div className="absolute bottom-4 md:bottom-6 right-4 md:right-6 z-20 flex space-x-3">
+      <div className="absolute bottom-4 md:bottom-6 right-4 md:right-6 z-20 flex space-x-2 md:space-x-3">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all duration-300 border-2 ${
+            className={`w-2.5 h-2.5 md:w-3 md:h-3 lg:w-4 lg:h-4 rounded-full transition-all duration-300 border-2 ${
               index === currentSlide
-                ? "bg-yellow-400 border-yellow-400 scale-125 shadow-lg"
+                ? "bg-brand-orange border-brand-orange scale-125 shadow-lg"
                 : "bg-white/60 border-white hover:bg-white/80 hover:border-white hover:scale-110"
             }`}
             aria-label={`Go to slide ${index + 1}`}
@@ -57,68 +58,70 @@ export function Hero() {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto text-center relative z-10 px-4 h-full flex flex-col justify-center py-2 md:py-4">
-        <div className="max-w-7xl mx-auto">
-          {/* Logo */}
-          <div className="mb-3 md:mb-6 lg:mb-8 flex flex-col justify-center items-center">
-            <div className="relative logo-container">
-              <div className="relative flex flex-col items-center">
-                <img
-                  src="/images/now-logo-empty.png"
-                  alt="NOW Logo"
-                  className="h-16 md:h-24 lg:h-40 w-auto drop-shadow-lg relative z-10 filter brightness-0 invert"
-                />
-                <div className="absolute top-0 right-0 z-20">
+      <div className="above-fold-content">
+        <div className="container mx-auto text-center relative z-10 px-4">
+          <div className="max-w-6xl mx-auto">
+            {/* Logo */}
+            <div className="mb-4 md:mb-6 lg:mb-8 flex flex-col justify-center items-center">
+              <div className="relative logo-container">
+                <div className="relative flex flex-col items-center">
                   <img
-                    src="/images/make.png"
-                    alt="Make it happen"
-                    className="h-2.5 md:h-4 lg:h-7 w-auto animate-typing-reveal filter brightness-0 invert"
+                    src="/images/now-logo-empty.webp"
+                    alt="NOW Logo"
+                    className="h-12 md:h-20 lg:h-32 xl:h-40 w-auto drop-shadow-lg relative z-10 filter brightness-0 invert"
                   />
+                  <div className="absolute top-0 right-0 z-20">
+                    <img
+                      src="/images/make.webp"
+                      alt="Make it happen"
+                      className="h-2 md:h-3 lg:h-5 xl:h-7 w-auto animate-typing-reveal filter brightness-0 invert"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          {/* Headline */}
-          <div className="mb-3 md:mb-4 lg:mb-6">
-            <h1 className="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-3 md:mb-4 lg:mb-6 leading-tight px-2">
-              {t("heroTitle")} <span className="text-yellow-400">{t("heroTitleHighlight")}</span>
-              <br />
-              {t("heroTitleEnd")}
-            </h1>
-            <div className="flex justify-center mb-3 md:mb-4 lg:mb-6">
-              <div className="w-8 md:w-12 lg:w-16 xl:w-20 h-1 bg-gradient-to-r from-yellow-400 to-yellow-500 rounded-full" />
+            {/* Headline */}
+            <div className="mb-4 md:mb-6">
+              <h1 className="text-lg md:text-2xl lg:text-4xl xl:text-5xl font-bold text-white mb-3 md:mb-4 lg:mb-6 leading-tight px-2">
+                {t("heroTitle")} <span className="text-brand-orange">{t("heroTitleHighlight")}</span>
+                <br />
+                {t("heroTitleEnd")}
+              </h1>
+              <div className="flex justify-center mb-3 md:mb-4 lg:mb-6">
+                <div className="w-6 md:w-10 lg:w-16 xl:w-20 h-1 bg-gradient-to-r from-brand-orange to-orange-600 rounded-full" />
+              </div>
             </div>
-          </div>
 
-          {/* Subtitle */}
-          <p className="text-sm md:text-base lg:text-lg xl:text-xl text-gray-200 mb-4 md:mb-6 lg:mb-8 leading-relaxed max-w-4xl mx-auto font-medium px-4">
-            {t("heroSubtitle")}
-          </p>
+            {/* Subtitle */}
+            <p className="text-xs md:text-sm lg:text-base xl:text-lg text-gray-200 mb-4 md:mb-6 lg:mb-8 leading-relaxed max-w-4xl mx-auto font-medium px-4">
+              {t("heroSubtitle")}
+            </p>
 
-          {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 md:gap-4 lg:gap-6 justify-center px-4">
-            <Link href="#contact" passHref>
-              <Button
-                size="lg"
-                className="bg-yellow-400 hover:bg-yellow-500 text-black px-6 md:px-8 lg:px-10 py-3 md:py-4 lg:py-5 text-sm md:text-base lg:text-lg font-bold shadow-xl hover:shadow-yellow-400/25 transition-all duration-300 transform hover:scale-105"
-              >
-                <Rocket className="mr-2 h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
-                {t("getStarted")}
-                <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
-              </Button>
-            </Link>
+            {/* Buttons */}
+            <div className="hero-buttons flex flex-col sm:flex-row gap-2 md:gap-3 lg:gap-4 justify-center px-4">
+              <Link href="#contact" passHref>
+                <Button
+                  size="lg"
+                  className="bg-brand-orange hover:bg-brand-orange-hover text-white px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 text-xs md:text-sm lg:text-base font-bold shadow-xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:scale-105"
+                >
+                  <Rocket className="mr-1 md:mr-2 h-3 w-3 md:h-4 md:w-4 lg:h-5 lg:w-5" />
+                  {t("getStarted")}
+                  <ArrowRight className="ml-1 md:ml-2 h-3 w-3 md:h-4 md:w-4 lg:h-5 lg:w-5" />
+                </Button>
+              </Link>
 
-            <Link href="#portfolio" passHref>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-2 border-white text-white hover:bg-white hover:text-black px-6 md:px-8 lg:px-10 py-3 md:py-4 lg:py-5 text-sm md:text-base lg:text-lg font-bold transition-all duration-300 transform hover:scale-105 bg-transparent backdrop-blur-sm"
-              >
-                <Sparkles className="mr-2 h-4 w-4 md:h-5 md:w-5 lg:h-6 lg:w-6" />
-                {t("viewWork")}
-              </Button>
-            </Link>
+              <Link href="#portfolio" passHref>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="border-2 border-white text-white hover:bg-white hover:text-black px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 text-xs md:text-sm lg:text-base font-bold transition-all duration-300 transform hover:scale-105 bg-transparent backdrop-blur-sm"
+                >
+                  <Sparkles className="mr-1 md:mr-2 h-3 w-3 md:h-4 md:w-4 lg:h-5 lg:w-5" />
+                  {t("viewWork")}
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

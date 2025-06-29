@@ -37,20 +37,20 @@ export function About() {
       icon: Cog,
       title: t("technicalExcellence"),
       description: t("technicalExcellenceDesc"),
-      color: "text-indigo-600",
-      bgColor: "bg-indigo-50",
+      color: "text-gray-600",
+      bgColor: "bg-gray-50",
     },
     {
       icon: Rocket,
       title: t("projectManagement"),
       description: t("projectManagementDesc"),
-      color: "text-emerald-600",
-      bgColor: "bg-emerald-50",
+      color: "text-brand-orange",
+      bgColor: "bg-orange-50",
     },
   ]
 
   return (
-    <section id="about" className="py-20 px-4 bg-slate-50">
+    <section id="about" className="py-20 px-4 bg-gray-50">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
           <div>
@@ -81,7 +81,7 @@ export function About() {
               alt="Our team at work"
               className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
           </div>
         </div>
 
@@ -94,8 +94,8 @@ export function About() {
           {values.map((value, index) => (
             <Card key={index} className="bg-white border-slate-200 text-center hover:shadow-lg transition-shadow">
               <CardContent className="p-8">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <value.icon className="h-8 w-8 text-blue-600" />
+                <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <value.icon className="h-8 w-8 text-brand-orange" />
                 </div>
                 <h4 className="text-xl font-semibold text-slate-800 mb-3">{value.title}</h4>
                 <p className="text-slate-600">{value.description}</p>

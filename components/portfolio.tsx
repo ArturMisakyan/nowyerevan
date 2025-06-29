@@ -68,7 +68,7 @@ export function Portfolio() {
   ]
 
   return (
-    <section ref={sectionRef} id="portfolio" className="py-12 md:py-20 px-4">
+    <section ref={sectionRef} id="portfolio" className="py-12 md:py-20 px-4 bg-gray-50">
       <div className="container mx-auto">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">{t("portfolioTitle")}</h2>
@@ -104,7 +104,7 @@ export function Portfolio() {
                   <h3 className="text-sm md:text-lg lg:text-xl font-semibold text-slate-800 mb-1 md:mb-2 break-words hyphens-auto">
                     {item.title}
                   </h3>
-                  <p className="text-blue-600 font-medium text-xs md:text-sm lg:text-base break-words">
+                  <p className="text-brand-orange font-medium text-xs md:text-sm lg:text-base break-words">
                     {item.category}
                   </p>
                 </CardContent>

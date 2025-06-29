@@ -47,6 +47,10 @@ body {
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Brand Colors */
+    --brand-orange: 15 100% 57%; /* #FF4C25 */
+    --brand-orange-hover: 15 100% 52%;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -93,6 +97,132 @@ body {
   }
 }
 
+/* Brand Orange Utilities */
+.bg-brand-orange {
+  background-color: hsl(var(--brand-orange));
+}
+
+.hover\:bg-brand-orange-hover:hover {
+  background-color: hsl(var(--brand-orange-hover));
+}
+
+.text-brand-orange {
+  color: hsl(var(--brand-orange));
+}
+
+.border-brand-orange {
+  border-color: hsl(var(--brand-orange));
+}
+
+.focus\:border-brand-orange:focus {
+  border-color: hsl(var(--brand-orange));
+}
+
+.focus\:ring-brand-orange:focus {
+  --tw-ring-color: hsl(var(--brand-orange));
+}
+
+/* Background Overlay Utility */
+.bg-overlay {
+  position: relative;
+}
+
+.bg-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, var(--overlay-opacity, 0.3));
+  z-index: 1;
+}
+
+.bg-overlay > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* 3D Booth Effect */
+.booth-3d-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.booth-3d {
+  transform: rotateX(5deg) rotateY(-5deg);
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2));
+}
+
+.booth-3d:hover {
+  transform: rotateX(0deg) rotateY(0deg) scale(1.05);
+}
+
+.booth-3d-bg {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.booth-3d-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 76, 37, 0.1) 0%, transparent 50%);
+  z-index: 1;
+}
+
+.booth-3d-bg > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* File Upload Styles */
+.file-upload-area {
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.file-upload-area:hover {
+  border-color: hsl(var(--brand-orange));
+  background-color: #fef7f0;
+}
+
+.file-upload-area.dragover {
+  border-color: hsl(var(--brand-orange));
+  background-color: #fef7f0;
+}
+
+.file-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.file-preview-item {
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  max-width: 200px;
+}
+
+.file-preview-item button {
+  margin-left: 0.5rem;
+  color: #ef4444;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 /* Mobile horizontal scroll for feature cards */
 @media (max-width: 768px) {
   .feature-cards-container {
@@ -136,7 +266,7 @@ body {
 }
 
 html {
-  scroll-padding-top: 100px;
+  scroll-padding-top: 80px;
   scroll-behavior: smooth;
 }
 
@@ -152,24 +282,48 @@ html {
   -ms-hyphens: auto;
 }
 
-/* Hero section optimized height */
+/* Hero section responsive design */
 #home {
-  min-height: 85vh;
-  max-height: 90vh;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   #home {
-    min-height: 90vh;
-    max-height: 95vh;
+    min-height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 40px;
   }
 }
 
-/* Ensure hero content fits properly */
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   #home {
-    min-height: 80vh;
-    max-height: 85vh;
+    min-height: 100vh;
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+}
+
+/* Responsive button scaling */
+@media (max-width: 640px) {
+  .hero-buttons {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-buttons {
+    transform: scale(0.8);
+    transform-origin: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-buttons {
+    transform: scale(0.75);
+    transform-origin: center;
   }
 }
 
@@ -187,4 +341,47 @@ html {
 
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Service cards grid layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Above the fold layout */
+.above-fold {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.above-fold-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .above-fold-content {
+    padding: 1rem;
+  }
+}
+
+/* Full height no scroll */
+.full-height-no-scroll {
+  height: 100vh;
+  overflow: hidden;
 }
