@@ -30,12 +30,21 @@ function ComingSoonContent() {
 
       {/* ✅ Main content */}
       <div className="w-full max-w-4xl flex flex-col items-center space-y-6 relative z-10 py-8">
-        {/* ✅ FINAL LOGO — uses one combined image */}
-        <img
-          src="/images/now-logo.png"
-          alt="NOW Logo with Make it happen"
-          className="w-40 md:w-56 lg:w-64 mx-auto drop-shadow-lg"
-        />
+        {/* ✅ LOGO with separate overlay + typing reveal */}
+        <div className="relative inline-block mb-8 mt-8">
+          <img
+            src="/images/now-logo-empty.webp"
+            alt="NOW Logo"
+            className="w-40 md:w-56 lg:w-64 mx-auto drop-shadow-lg filter brightness-0 invert"
+          />
+          <div className="absolute top-0 right-0 z-20">
+            <img
+              src="/images/make.webp"
+              alt="Make it happen"
+              className="h-3 md:h-4 w-auto animate-typing-reveal filter brightness-0 invert"
+            />
+          </div>
+        </div>
 
         {/* Badge */}
         <div className="inline-flex items-center space-x-2 bg-brand-orange text-white px-6 py-2 rounded-full font-bold text-sm md:text-base animate-pulse">
@@ -107,6 +116,25 @@ function ComingSoonContent() {
           <p className="text-gray-400 text-sm">75% Complete</p>
         </div>
       </div>
+
+      {/* ✅ Typing reveal style block */}
+      <style jsx>{`
+        @keyframes typing-reveal {
+          0% {
+            opacity: 0;
+            clip-path: inset(0 100% 0 0);
+          }
+          100% {
+            opacity: 1;
+            clip-path: inset(0 0% 0 0);
+          }
+        }
+        .animate-typing-reveal {
+          animation: typing-reveal 3s ease-out forwards;
+          animation-delay: 1s;
+          animation-fill-mode: both;
+        }
+      `}</style>
     </div>
   )
 }
