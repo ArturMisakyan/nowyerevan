@@ -10,7 +10,7 @@ export function Hero() {
   const { t } = useLanguage()
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  const slides = ["/images/Event1.webp", "/images/Event2.webp", "/images/Exhibition Booth.webp"]
+  const slides = [""/images/Exhibition Booth.webp", /images/Event1.webp", "/images/Event2.webp"]
 
   useEffect(() => {
     const interval = setInterval(() => {
