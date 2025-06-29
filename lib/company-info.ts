@@ -11,18 +11,18 @@ export const COMPANY_INFO = {
     address: {
       en: {
         city: "Yerevan, Armenia",
-        street: "Tumanyan Street 15",
-        full: "Tumanyan Street 15, Yerevan, Armenia",
+        street: "64 Marshal Baghramyan Ave.",
+        full: "64 Marshal Baghramyan Ave., Yerevan, Armenia",
       },
       hy: {
         city: "Երևան, Հայաստան",
-        street: "Թումանյան փողոց 15",
-        full: "Թումանյան փողոց 15, Երևան, Հայաստան",
+        street: "Մարշալ Բաղրամյան պողոտա 64",
+        full: "Մարշալ Բաղրամյան պողոտա 64, Երևան, Հայաստան",
       },
       ru: {
         city: "Ереван, Армения",
-        street: "Улица Туманяна 15",
-        full: "Улица Туманяна 15, Ереван, Армения",
+        street: "Проспект Маршала Баграмяна 64",
+        full: "Проспект Маршала Баграмяна 64, Ереван, Армения",
       },
     },
   },
