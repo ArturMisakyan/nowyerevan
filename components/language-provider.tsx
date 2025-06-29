@@ -34,7 +34,7 @@ const translations = {
 
     // Services
     servicesTitle: "Մեր Ծառայությունները",
-    servicesSubtitle: "Լայն տեսականի մասնագիտական ծառայություններ ձեր բիզնեսի համար",
+    servicesSubtitle: "Մասնագիտական համալիր ծառայություններ ձեր բիզնեսի համար",
 
     outdoorAd: "Արտաքին գովազդ",
     outdoorAdDesc: "LED էկրաններ, բաններներ, լայթբոքս և այլ արտաքին գովազդային լուծումներ",
@@ -133,9 +133,9 @@ const translations = {
 
     // Additional missing translations
     premiumQuality: "Պրեմիում որակ",
-    premiumQualityDesc: "Մասնագիտական դասի նյութեր և փորձագետ արհեստավորություն",
-    expertTeam: "Փորձագետ թիմ",
-    expertTeamDesc: "Փորձառու դիզայներներ և տեխնիկական մասնագետներ",
+    premiumQualityDesc: "Որակը մեր ոճն է",
+    expertTeam: "Առաջատար Մասնագետներ",
+    expertTeamDesc: "Ոլորտի լավագույն մասնագետները ստեղծում են բացառիկ նախագծեր",
     fastDelivery: "Արագ առաքում",
     fastDeliveryDesc: "Արագ կատարման ժամկետներ առանց որակի նվազեցման",
 
@@ -163,16 +163,13 @@ const translations = {
     lightingSetup: "Լուսավորության տեղադրում",
     themedDecorations: "Թեմատիկ զարդարում",
 
-    retailDesign: "Մանրածախ դիզայն",
-    restaurantInteriors: "Ռեստորանի ինտերիեր",
-    officeSpaces: "Գրասենյակային տարածքներ",
-    showrooms: "Ցուցասրահներ",
-    brandEnvironments: "Բրենդային միջավայր",
-    furniture: "Կահույք",
+    interiorDesign: "Ինտերիերի դիզայն",
+    exteriorDesign: "Էքստերիերի դիզայն",
+    commercialFurniture: "Կոմերցիոն կահույք",
+    sculptures3D: "3D քանդակներ",
 
     largeFormatPrinting: "Լայնաֆորմատ տպագրություն",
     digitalPrinting: "Թվային տպագրություն",
-    vinylGraphics: "Վինիլային գրաֆիկա",
     promotionalItems: "Գովազդային իրեր",
     signage: "Ցուցանակներ",
 
@@ -195,10 +192,10 @@ const translations = {
     // Values Section
     ourValues: "Մեր Արժեքները",
     valuesDescription:
-      "Սկզբունքները, որոնք ղեկավարում են մեր աշխատանքը և սահմանում մեր հանձնառությունը գերազանցության նկատմամբ",
+      "Սկզբունքներ, որոնք մեզ դարձնում են առաջատար և միշտ ապահովում հաճախորդի գոհունակությունը",
 
     precision: "Ճշգրտություն",
-    precisionDesc: "Յուրաքանչյուր նախագիծ իրականացվում է մանրակրկիտ ուշադրությամբ մանրամասների նկատմամբ",
+    precisionDesc: "Յուրաքանչյուր նախագիծ իրականացվում է մանրակրկիտ ուշադրությամբ դետալների նկատմամբ",
 
     innovation: "Նորարարություն",
     innovationDesc: "Առաջադեմ լուծումներ՝ օգտագործելով վերջին տեխնոլոգիաները և միտումները",
@@ -348,9 +345,9 @@ const translations = {
 
     // Additional translations
     premiumQuality: "Premium Quality",
-    premiumQualityDesc: "Professional grade materials and expert craftsmanship",
-    expertTeam: "Expert Team",
-    expertTeamDesc: "Experienced designers and technical specialists",
+    premiumQualityDesc: "Quality is our style",
+    expertTeam: "Leading Experts",
+    expertTeamDesc: "Top experts craft outstanding projects",
     fastDelivery: "Fast Delivery",
     fastDeliveryDesc: "Quick turnaround times without compromising quality",
 
@@ -378,16 +375,13 @@ const translations = {
     lightingSetup: "Lighting Setup",
     themedDecorations: "Themed Decorations",
 
-    retailDesign: "Retail Design",
-    restaurantInteriors: "Restaurant Interiors",
-    officeSpaces: "Office Spaces",
-    showrooms: "Showrooms",
-    brandEnvironments: "Brand Environments",
-    furniture: "Furniture",
+    interiorDesign: "Interior Design",
+    exteriorDesign: "Exterior Design",
+    commercialFurniture: "Commercial Furniture",
+    sculptures3D: "3D Sculptures",
 
     largeFormatPrinting: "Large Format Printing",
     digitalPrinting: "Digital Printing",
-    vinylGraphics: "Vinyl Graphics",
     promotionalItems: "Promotional Items",
     signage: "Signage",
 
@@ -409,7 +403,7 @@ const translations = {
 
     // Values Section
     ourValues: "Our Values",
-    valuesDescription: "The principles that guide our work and define our commitment to excellence",
+    valuesDescription: "Principles that make us a leader and always ensure customer satisfaction",
 
     precision: "Precision",
     precisionDesc: "Every project executed with meticulous attention to detail",
@@ -563,9 +557,9 @@ const translations = {
 
     // Additional translations
     premiumQuality: "Премиум качество",
-    premiumQualityDesc: "Профессиональные материалы и экспертное мастерство",
-    expertTeam: "Экспертная команда",
-    expertTeamDesc: "Опытные дизайнеры и технические специалисты",
+    premiumQualityDesc: "Качество — наш стиль",
+    expertTeam: "Ведущие эксперты",
+    expertTeamDesc: "Лучшие эксперты создают выдающиеся проекты",
     fastDelivery: "Быстрая доставка",
     fastDeliveryDesc: "Быстрые сроки выполнения без ущерба качеству",
 
@@ -593,16 +587,13 @@ const translations = {
     lightingSetup: "Установка освещения",
     themedDecorations: "Тематические украшения",
 
-    retailDesign: "Дизайн розничной торговли",
-    restaurantInteriors: "Интерьеры ресторанов",
-    officeSpaces: "Офисные помещения",
-    showrooms: "Шоурумы",
-    brandEnvironments: "Брендовая среда",
-    furniture: "Мебель",
+    interiorDesign: "Дизайн интерьера",
+    exteriorDesign: "Дизайн экстерьера",
+    commercialFurniture: "Коммерческая мебель",
+    sculptures3D: "3D скульптуры",
 
     largeFormatPrinting: "Широкоформатная печать",
     digitalPrinting: "Цифровая печать",
-    vinylGraphics: "Виниловая графика",
     promotionalItems: "Рекламные товары",
     signage: "Вывески",
 
@@ -624,7 +615,7 @@ const translations = {
 
     // Values Section
     ourValues: "Наши Ценности",
-    valuesDescription: "Принципы, которые направляют нашу работу и определяют нашу приверженность к совершенству",
+    valuesDescription: "Принципы, которые делают нас лидером и всегда гарантируют удовлетворённость клиентов",
 
     precision: "Точность",
     precisionDesc: "Каждый проект выполняется с тщательным вниманием к деталям",
