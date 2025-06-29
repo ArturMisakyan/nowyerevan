@@ -28,7 +28,7 @@ const translations = {
     heroTitleHighlight: "Գաղափարները",
     heroTitleEnd: "Կյանք NOW",
     heroSubtitle:
-      "Տեսլականից դեպի իրականություն – Մենք մասնագիտացված ենք գովազդային և դեկորատիվ լուծումների մեջ՝ արտաքին գովազդից մինչև էքսպո պավիլիոններ և առևտրային տարածքների ձևավորում:",
+      "Մենք մասնագիտացած ենք գովազդային և դեկորատիվ լուծումներում՝ արտաքին գովազդից մինչև էքսպո տաղավարներ և կոմերցիոն տարածքների ձևավորում",
     getStarted: "Սկսել նախագիծը",
     viewWork: "Դիտել աշխատանքները",
 
@@ -241,7 +241,7 @@ const translations = {
     heroTitleHighlight: "Ideas",
     heroTitleEnd: "to Life NOW",
     heroSubtitle:
-      "From Vision to Reality – We are specialized in advertising and decorative solutions, from outdoor advertising to expo pavilions and commercial space design.",
+      "We specialize in advertising and decorative solutions — from outdoor ads to expo pavilions and commercial space design",
     getStarted: "Get Started",
     viewWork: "View Our Work",
 
@@ -452,7 +452,7 @@ const translations = {
     heroTitleHighlight: "Идеи",
     heroTitleEnd: "в Жизнь NOW",
     heroSubtitle:
-      "От видения к реальности – Мы специализируемся на рекламных и декоративных решениях: от наружной рекламы до экспо-павильонов и оформления коммерческих пространств.",
+      "Мы специализируемся на рекламных и декоративных решениях — от наружной рекламы до экспо-павильонов и оформления коммерческих пространств",
     getStarted: "Начать проект",
     viewWork: "Посмотреть работы",
 
