@@ -10,7 +10,13 @@ export function Hero() {
   const { t } = useLanguage()
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  const slides = ["/images/Exhibition Booth.webp", "/images/Event1.webp", "/images/Event2.webp"]
+  // ✅ Final slides: Exhibition Booth, Interior, Vinyl_Printing, Event1
+  const slides = [
+    "/images/Exhibition Booth.webp",
+    "/images/Interior.webp",
+    "/images/Vinyl_Printing.webp",
+    "/images/Event1.webp",
+  ]
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,7 +31,7 @@ export function Hero() {
 
   return (
     <section id="home" className="relative overflow-hidden above-fold">
-      {/* Background Carousel with configurable overlay */}
+      {/* Background Carousel */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
           <div
@@ -34,11 +40,17 @@ export function Hero() {
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
           >
-            <img src={slide || "/placeholder.svg"} alt="Background" className="w-full h-full object-cover" />
+            <img
+              src={slide || "/placeholder.svg"}
+              alt="Background"
+              className="w-full h-full object-cover"
+            />
           </div>
         ))}
-        {/* Configurable overlay */}
-        <div className="absolute inset-0 bg-black" style={{ opacity: "var(--overlay-opacity, 0.3)" }} />
+        <div
+          className="absolute inset-0 bg-black"
+          style={{ opacity: "var(--overlay-opacity, 0.3)" }}
+        />
       </div>
 
       {/* Carousel Dots */}
@@ -81,22 +93,28 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Headline */}
+            {/* Headline with blur */}
             <div className="mb-4 md:mb-6">
-              <h1 className="text-lg md:text-2xl lg:text-4xl xl:text-5xl font-bold text-white mb-3 md:mb-4 lg:mb-6 leading-tight px-2">
-                {t("heroTitle")} <span className="text-brand-orange">{t("heroTitleHighlight")}</span>
-                <br />
-                {t("heroTitleEnd")}
-              </h1>
+              <div className="inline-block bg-white/10 backdrop-blur-sm rounded-md px-4 py-2">
+                <h1 className="text-lg md:text-2xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight">
+                  {t("heroTitle")}{" "}
+                  <span className="text-brand-orange">
+                    {t("heroTitleHighlight")}
+                  </span>
+                  <br />
+                  {t("heroTitleEnd")}
+                </h1>
+              </div>
               <div className="flex justify-center mb-3 md:mb-4 lg:mb-6">
                 <div className="w-6 md:w-10 lg:w-16 xl:w-20 h-1 bg-gradient-to-r from-brand-orange to-orange-600 rounded-full" />
               </div>
             </div>
 
-            {/* Subtitle */}
+            {/* Subtitle with blur */}
             <p className="text-xs md:text-sm lg:text-base xl:text-lg text-gray-200 mb-4 md:mb-6 lg:mb-8 leading-relaxed max-w-4xl mx-auto font-medium px-4 py-3 bg-white/10 backdrop-blur-sm rounded-md">
-  {t("heroSubtitle")}
-</p>
+              {t("heroSubtitle")}
+            </p>
+
             {/* Buttons */}
             <div className="hero-buttons flex flex-col sm:flex-row gap-2 md:gap-3 lg:gap-4 justify-center px-4">
               <Link href="#contact" passHref>
