@@ -93,9 +93,9 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Headline with blur */}
+            {/* Headline with white frosted glass */}
             <div className="mb-4 md:mb-6">
-              <div className="inline-block bg-white/10 backdrop-blur-sm rounded-md px-4 py-2">
+              <div className="inline-block bg-white/30 backdrop-blur-md rounded-md border border-white/20 px-4 py-2">
                 <h1 className="text-lg md:text-2xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight">
                   {t("heroTitle")}{" "}
                   <span className="text-brand-orange">
@@ -110,8 +110,8 @@ export function Hero() {
               </div>
             </div>
 
-            {/* Subtitle with blur */}
-            <p className="text-xs md:text-sm lg:text-base xl:text-lg text-gray-200 mb-4 md:mb-6 lg:mb-8 leading-relaxed max-w-4xl mx-auto font-medium px-4 py-3 bg-white/10 backdrop-blur-sm rounded-md">
+            {/* Subtitle with white frosted glass */}
+            <p className="text-xs md:text-sm lg:text-base xl:text-lg text-gray-200 mb-4 md:mb-6 lg:mb-8 leading-relaxed max-w-4xl mx-auto font-medium px-4 py-3 bg-white/30 backdrop-blur-md rounded-md border border-white/20">
               {t("heroSubtitle")}
             </p>
 
@@ -132,7 +132,7 @@ export function Hero() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="border-2 border-white text-white hover:bg-white hover:text-black px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 text-xs md:text-sm lg:text-base font-bold transition-all duration-300 transform hover:scale-105 bg-transparent backdrop-blur-sm"
+                  className="border-2 border-white/60 text-white hover:bg-white hover:text-black px-4 md:px-6 lg:px-8 py-2 md:py-3 lg:py-4 text-xs md:text-sm lg:text-base font-bold transition-all duration-300 transform hover:scale-105 bg-white/20 backdrop-blur-md"
                 >
                   <Sparkles className="mr-1 md:mr-2 h-3 w-3 md:h-4 md:w-4 lg:h-5 lg:w-5" />
                   {t("viewWork")}
