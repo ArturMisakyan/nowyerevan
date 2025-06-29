@@ -32,15 +32,19 @@ function ComingSoonContent() {
         {/* Main content */}
 
         {/* Logo section */}
-        <div className="mb-8">
+        <div className="mb-8 mt-8">
           <div className="relative inline-block">
             <img
               src="/images/now-logo-empty.webp"
               alt="NOW Logo"
               className="h-20 md:h-32 w-auto mx-auto filter brightness-0 invert drop-shadow-lg"
             />
-            <div className="absolute -top-2 -right-2 md:-top-4 md:-right-4">
-              <div className="w-4 h-4 md:w-6 md:h-6 bg-brand-orange rounded-full animate-bounce"></div>
+            <div className="absolute top-0 right-0 z-20">
+              <img
+                src="/images/make.webp"
+                alt="Make it happen"
+                className="h-3 md:h-5 w-auto animate-typing-reveal filter brightness-0 invert"
+              />
             </div>
           </div>
         </div>
@@ -129,6 +133,22 @@ function ComingSoonContent() {
         }
         .animate-float {
           animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes typing-reveal {
+          0% {
+            opacity: 0;
+            clip-path: inset(0 100% 0 0);
+          }
+          100% {
+            opacity: 1;
+            clip-path: inset(0 0% 0 0);
+          }
+        }
+        .animate-typing-reveal {
+          animation: typing-reveal 3s ease-out forwards;
+          animation-delay: 1s;
+          animation-fill-mode: both;
         }
       `}</style>
     </div>
