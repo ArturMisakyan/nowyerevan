@@ -18,32 +18,25 @@ function ComingSoonContent() {
   if (!t) return null
 
   return (
-    <div className="min-h-screen flex flex-col justify-center items-center px-4 overflow-y-auto bg-gradient-to-br from-black via-gray-900 to-black relative">
-      {/* Animated background */}
+    <div className="min-h-screen flex flex-col justify-center items-center px-4 overflow-y-auto bg-gradient-to-br from-white via-gray-100 to-white relative">
+      {/* Optional background decorations */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-20 w-2 h-2 bg-brand-orange rounded-full animate-pulse"></div>
-        <div className="absolute top-40 right-32 w-1 h-1 bg-white rounded-full animate-ping"></div>
+        <div className="absolute top-40 right-32 w-1 h-1 bg-black rounded-full animate-ping"></div>
         <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-brand-orange rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-white rounded-full animate-ping delay-500"></div>
+        <div className="absolute top-1/3 right-1/4 w-1 h-1 bg-black rounded-full animate-ping delay-500"></div>
         <div className="absolute bottom-20 right-20 w-2 h-2 bg-brand-orange rounded-full animate-pulse delay-700"></div>
       </div>
 
-      {/* ✅ Main content */}
+      {/* Main content */}
       <div className="w-full max-w-4xl flex flex-col items-center space-y-6 relative z-10 py-8">
-        {/* ✅ LOGO with separate overlay + responsive scaling */}
-        <div className="relative inline-block mb-6 mt-6">
+        {/* ✅ FINAL LOGO — one image, no overlay */}
+        <div className="inline-block mb-6 mt-6">
           <img
-            src="/images/now-logo-empty.webp"
-            alt="NOW Logo"
-            className="w-24 sm:w-32 md:w-40 lg:w-56 mx-auto drop-shadow-lg filter brightness-0 invert"
+            src="/images/now-logo.png"
+            alt="NOW Logo with Make it happen"
+            className="w-32 sm:w-40 md:w-52 lg:w-64 mx-auto drop-shadow-lg"
           />
-          <div className="absolute top-0 right-0 sm:top-1 sm:right-1 md:top-2 md:right-2 z-20">
-            <img
-              src="/images/make.webp"
-              alt="Make it happen"
-              className="h-2 sm:h-2.5 md:h-3 lg:h-4 w-auto animate-typing-reveal filter brightness-0 invert"
-            />
-          </div>
         </div>
 
         {/* Badge */}
@@ -54,7 +47,7 @@ function ComingSoonContent() {
         </div>
 
         {/* Headline */}
-        <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight text-center">
+        <h1 className="text-3xl md:text-5xl font-bold text-black leading-tight text-center">
           Something{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-orange-600">
             Amazing
@@ -64,27 +57,27 @@ function ComingSoonContent() {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-sm md:text-base text-gray-300 leading-relaxed text-center max-w-xl">
+        <p className="text-sm md:text-base text-gray-700 leading-relaxed text-center max-w-xl">
           {t("comingSoonMessage")}
         </p>
 
         {/* Features */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-2xl">
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 hover:bg-white/10 transition">
+          <div className="bg-black/5 backdrop-blur-sm border border-black/10 rounded-lg p-4 hover:bg-black/10 transition">
             <Star className="w-5 h-5 text-brand-orange mx-auto mb-2" />
-            <p className="text-white text-xs md:text-sm font-medium text-center">
+            <p className="text-black text-xs md:text-sm font-medium text-center">
               Premium Design
             </p>
           </div>
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 hover:bg-white/10 transition">
+          <div className="bg-black/5 backdrop-blur-sm border border-black/10 rounded-lg p-4 hover:bg-black/10 transition">
             <Rocket className="w-5 h-5 text-brand-orange mx-auto mb-2" />
-            <p className="text-white text-xs md:text-sm font-medium text-center">
+            <p className="text-black text-xs md:text-sm font-medium text-center">
               Fast Performance
             </p>
           </div>
-          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 hover:bg-white/10 transition">
+          <div className="bg-black/5 backdrop-blur-sm border border-black/10 rounded-lg p-4 hover:bg-black/10 transition">
             <Sparkles className="w-5 h-5 text-brand-orange mx-auto mb-2" />
-            <p className="text-white text-xs md:text-sm font-medium text-center">
+            <p className="text-black text-xs md:text-sm font-medium text-center">
               Modern Features
             </p>
           </div>
@@ -99,7 +92,7 @@ function ComingSoonContent() {
         </Link>
 
         {/* Stay Tuned */}
-        <div className="flex items-center justify-center space-x-2 text-gray-400">
+        <div className="flex items-center justify-center space-x-2 text-gray-500">
           <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse"></div>
           <span className="text-xs md:text-sm font-medium">{t("stayTuned")}</span>
           <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse delay-300"></div>
@@ -107,34 +100,15 @@ function ComingSoonContent() {
 
         {/* Progress */}
         <div className="w-full max-w-md">
-          <div className="w-full bg-gray-800 rounded-full h-2 mb-2">
+          <div className="w-full bg-gray-300 rounded-full h-2 mb-2">
             <div
               className="bg-gradient-to-r from-brand-orange to-orange-600 h-2 rounded-full animate-pulse"
               style={{ width: "75%" }}
             ></div>
           </div>
-          <p className="text-gray-400 text-xs md:text-sm">75% Complete</p>
+          <p className="text-gray-500 text-xs md:text-sm">75% Complete</p>
         </div>
       </div>
-
-      {/* ✅ Typing reveal style block */}
-      <style jsx>{`
-        @keyframes typing-reveal {
-          0% {
-            opacity: 0;
-            clip-path: inset(0 100% 0 0);
-          }
-          100% {
-            opacity: 1;
-            clip-path: inset(0 0% 0 0);
-          }
-        }
-        .animate-typing-reveal {
-          animation: typing-reveal 3s ease-out forwards;
-          animation-delay: 1s;
-          animation-fill-mode: both;
-        }
-      `}</style>
     </div>
   )
 }
