@@ -25,7 +25,8 @@ export function Services() {
       features: [t("ledDisplays"), t("banners"), t("lightBoxes"), t("roofingMaterials")],
       color: "text-black",
       bgColor: "bg-gray-100",
-      link: "/services/outdoor-advertising",
+      //link: "/services/outdoor-advertising",
+      link: "/coming-soon",
     },
     {
       icon: Building,
@@ -40,7 +41,8 @@ export function Services() {
       ],
       color: "text-brand-orange",
       bgColor: "bg-orange-50",
-      link: "/services/expo-pavilions",
+      //link: "/services/expo-pavilions",
+      link: "/coming-soon",
     },
     {
       icon: PartyPopper,
@@ -49,7 +51,8 @@ export function Services() {
       features: [t("stageDesign"), t("backdropCreation"), t("lightingSetup"), t("themedDecorations")],
       color: "text-black",
       bgColor: "bg-gray-100",
-      link: "/services/event-decoration",
+      //link: "/services/event-decoration",
+      link: "/coming-soon",
     },
     {
       icon: Store,
@@ -65,7 +68,8 @@ export function Services() {
       ],
       color: "text-brand-orange",
       bgColor: "bg-orange-50",
-      link: "/services/commercial-design",
+      //link: "/services/commercial-design",
+      link: "/coming-soon",
     },
     {
       icon: Printer,
@@ -80,7 +84,8 @@ export function Services() {
       ],
       color: "text-black",
       bgColor: "bg-gray-100",
-      link: "/services/printing",
+      //link: "/services/printing",
+      link: "/coming-soon",
     },
     {
       icon: Globe,
@@ -96,7 +101,8 @@ export function Services() {
       ],
       color: "text-brand-orange",
       bgColor: "bg-orange-50",
-      link: "/services/digital-services",
+      //link: "/services/digital-services",
+      link: "/coming-soon",
     },
   ]
 
