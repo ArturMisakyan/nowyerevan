@@ -15,7 +15,7 @@ function ComingSoonContent() {
   }, [])
 
   if (!mounted) return null
-
+  if (!t) return null // Ensure translations are loaded
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black flex items-center justify-center px-4 relative overflow-hidden">
       {/* Animated background elements */}
