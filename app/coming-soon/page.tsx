@@ -30,21 +30,22 @@ function ComingSoonContent() {
 
       {/* ✅ Main content */}
       <div className="w-full max-w-4xl flex flex-col items-center space-y-6 relative z-10 py-8">
-        {/* ✅ LOGO with smaller mobile size + overlay */}
-        <div className="relative inline-block mb-6 mt-6">
-          <img
-            src="/images/now-logo-empty.webp"
-            alt="NOW Logo"
-            className="w-32 md:w-40 lg:w-56 mx-auto drop-shadow-lg filter brightness-0 invert"
-          />
-          <div className="absolute top-0 right-0 md:right-1 z-20">
-            <img
-              src="/images/make.webp"
-              alt="Make it happen"
-              className="h-2 md:h-3 lg:h-4 w-auto animate-typing-reveal filter brightness-0 invert"
-            />
-          </div>
-        </div>
+      {/* ✅ LOGO block, 2 parts, responsive */}
+<div className="relative inline-block mb-6 mt-6">
+  <img
+    src="/images/now-logo-empty.webp"
+    alt="NOW Logo"
+    className="w-24 sm:w-32 md:w-40 lg:w-56 mx-auto drop-shadow-lg filter brightness-0 invert"
+  />
+  <div className="absolute top-0 right-0 sm:top-1 sm:right-1 md:top-2 md:right-2 z-20">
+    <img
+      src="/images/make.webp"
+      alt="Make it happen"
+      className="h-2 sm:h-2.5 md:h-3 lg:h-4 w-auto animate-typing-reveal filter brightness-0 invert"
+    />
+  </div>
+</div>
+
 
         {/* Badge */}
         <div className="inline-flex items-center space-x-2 bg-brand-orange text-white px-5 py-1.5 rounded-full font-bold text-xs md:text-sm animate-pulse">
@@ -119,22 +120,22 @@ function ComingSoonContent() {
 
       {/* ✅ Typing reveal style block */}
       <style jsx>{`
-        @keyframes typing-reveal {
-          0% {
-            opacity: 0;
-            clip-path: inset(0 100% 0 0);
-          }
-          100% {
-            opacity: 1;
-            clip-path: inset(0 0% 0 0);
-          }
-        }
-        .animate-typing-reveal {
-          animation: typing-reveal 3s ease-out forwards;
-          animation-delay: 1s;
-          animation-fill-mode: both;
-        }
-      `}</style>
+  @keyframes typing-reveal {
+    0% {
+      opacity: 0;
+      clip-path: inset(0 100% 0 0);
+    }
+    100% {
+      opacity: 1;
+      clip-path: inset(0 0% 0 0);
+    }
+  }
+  .animate-typing-reveal {
+    animation: typing-reveal 3s ease-out forwards;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+  }
+`}</style>
     </div>
   )
 }
