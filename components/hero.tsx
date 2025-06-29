@@ -94,10 +94,9 @@ export function Hero() {
             </div>
 
             {/* Subtitle */}
-            <p className="text-xs md:text-sm lg:text-base xl:text-lg text-gray-200 mb-4 md:mb-6 lg:mb-8 leading-relaxed max-w-4xl mx-auto font-medium px-4">
-              {t("heroSubtitle")}
-            </p>
-
+            <p className="text-xs md:text-sm lg:text-base xl:text-lg text-gray-200 mb-4 md:mb-6 lg:mb-8 leading-relaxed max-w-4xl mx-auto font-medium px-4 py-3 bg-white/10 backdrop-blur-sm rounded-md">
+  {t("heroSubtitle")}
+</p>
             {/* Buttons */}
             <div className="hero-buttons flex flex-col sm:flex-row gap-2 md:gap-3 lg:gap-4 justify-center px-4">
               <Link href="#contact" passHref>
