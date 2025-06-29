@@ -28,13 +28,13 @@ function ComingSoonContent() {
         <div className="absolute bottom-20 right-20 w-2 h-2 bg-brand-orange rounded-full animate-pulse delay-700"></div>
       </div>
 
-      {/* Main content */}
+      {/* ✅ Main content */}
       <div className="w-full max-w-4xl flex flex-col items-center space-y-6 relative z-10 py-8">
-        {/* ✅ Use the combined logo */}
+        {/* ✅ FINAL LOGO — uses one combined image */}
         <img
           src="/images/now-logo.png"
           alt="NOW Logo with Make it happen"
-          className="w-40 md:w-56 drop-shadow-lg"
+          className="w-40 md:w-56 lg:w-64 mx-auto drop-shadow-lg"
         />
 
         {/* Badge */}
@@ -81,7 +81,7 @@ function ComingSoonContent() {
           </div>
         </div>
 
-        {/* CTA Button */}
+        {/* CTA */}
         <Link href="/" passHref>
           <Button className="bg-brand-orange hover:bg-brand-orange-hover text-white px-6 py-3 text-base font-bold shadow-xl hover:shadow-orange-500/25 transition transform hover:scale-105 group">
             <ArrowLeft className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1" />
@@ -107,24 +107,6 @@ function ComingSoonContent() {
           <p className="text-gray-400 text-sm">75% Complete</p>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes typing-reveal {
-          0% {
-            opacity: 0;
-            clip-path: inset(0 100% 0 0);
-          }
-          100% {
-            opacity: 1;
-            clip-path: inset(0 0% 0 0);
-          }
-        }
-        .animate-typing-reveal {
-          animation: typing-reveal 3s ease-out forwards;
-          animation-delay: 1s;
-          animation-fill-mode: both;
-        }
-      `}</style>
     </div>
   )
 }
