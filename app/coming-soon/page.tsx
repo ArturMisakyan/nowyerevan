@@ -30,31 +30,31 @@ function ComingSoonContent() {
 
       {/* ✅ Main content */}
       <div className="w-full max-w-4xl flex flex-col items-center space-y-6 relative z-10 py-8">
-        {/* ✅ LOGO with separate overlay + typing reveal */}
-        <div className="relative inline-block mb-8 mt-8">
+        {/* ✅ LOGO with smaller mobile size + overlay */}
+        <div className="relative inline-block mb-6 mt-6">
           <img
             src="/images/now-logo-empty.webp"
             alt="NOW Logo"
-            className="w-40 md:w-56 lg:w-64 mx-auto drop-shadow-lg filter brightness-0 invert"
+            className="w-32 md:w-40 lg:w-56 mx-auto drop-shadow-lg filter brightness-0 invert"
           />
-          <div className="absolute top-0 right-0 z-20">
+          <div className="absolute top-0 right-0 md:right-1 z-20">
             <img
               src="/images/make.webp"
               alt="Make it happen"
-              className="h-3 md:h-4 w-auto animate-typing-reveal filter brightness-0 invert"
+              className="h-2 md:h-3 lg:h-4 w-auto animate-typing-reveal filter brightness-0 invert"
             />
           </div>
         </div>
 
         {/* Badge */}
-        <div className="inline-flex items-center space-x-2 bg-brand-orange text-white px-6 py-2 rounded-full font-bold text-sm md:text-base animate-pulse">
+        <div className="inline-flex items-center space-x-2 bg-brand-orange text-white px-5 py-1.5 rounded-full font-bold text-xs md:text-sm animate-pulse">
           <Clock className="w-4 h-4" />
           <span>{t("comingSoonTitle")}</span>
           <Sparkles className="w-4 h-4" />
         </div>
 
         {/* Headline */}
-        <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight text-center">
+        <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight text-center">
           Something{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-orange-600">
             Amazing
@@ -64,27 +64,27 @@ function ComingSoonContent() {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-base md:text-lg text-gray-300 leading-relaxed text-center max-w-xl">
+        <p className="text-sm md:text-base text-gray-300 leading-relaxed text-center max-w-xl">
           {t("comingSoonMessage")}
         </p>
 
         {/* Features */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full max-w-2xl">
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 hover:bg-white/10 transition">
-            <Star className="w-6 h-6 text-brand-orange mx-auto mb-2" />
-            <p className="text-white text-sm font-medium text-center">
+            <Star className="w-5 h-5 text-brand-orange mx-auto mb-2" />
+            <p className="text-white text-xs md:text-sm font-medium text-center">
               Premium Design
             </p>
           </div>
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 hover:bg-white/10 transition">
-            <Rocket className="w-6 h-6 text-brand-orange mx-auto mb-2" />
-            <p className="text-white text-sm font-medium text-center">
+            <Rocket className="w-5 h-5 text-brand-orange mx-auto mb-2" />
+            <p className="text-white text-xs md:text-sm font-medium text-center">
               Fast Performance
             </p>
           </div>
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg p-4 hover:bg-white/10 transition">
-            <Sparkles className="w-6 h-6 text-brand-orange mx-auto mb-2" />
-            <p className="text-white text-sm font-medium text-center">
+            <Sparkles className="w-5 h-5 text-brand-orange mx-auto mb-2" />
+            <p className="text-white text-xs md:text-sm font-medium text-center">
               Modern Features
             </p>
           </div>
@@ -92,8 +92,8 @@ function ComingSoonContent() {
 
         {/* CTA */}
         <Link href="/" passHref>
-          <Button className="bg-brand-orange hover:bg-brand-orange-hover text-white px-6 py-3 text-base font-bold shadow-xl hover:shadow-orange-500/25 transition transform hover:scale-105 group">
-            <ArrowLeft className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1" />
+          <Button className="bg-brand-orange hover:bg-brand-orange-hover text-white px-5 py-2 text-xs md:text-sm font-bold shadow-xl hover:shadow-orange-500/25 transition transform hover:scale-105 group">
+            <ArrowLeft className="mr-2 h-4 w-4 transition-transform group-hover:-translate-x-1" />
             {t("backToHome")}
           </Button>
         </Link>
@@ -101,7 +101,7 @@ function ComingSoonContent() {
         {/* Stay Tuned */}
         <div className="flex items-center justify-center space-x-2 text-gray-400">
           <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse"></div>
-          <span className="text-sm font-medium">{t("stayTuned")}</span>
+          <span className="text-xs md:text-sm font-medium">{t("stayTuned")}</span>
           <div className="w-2 h-2 bg-brand-orange rounded-full animate-pulse delay-300"></div>
         </div>
 
@@ -113,7 +113,7 @@ function ComingSoonContent() {
               style={{ width: "75%" }}
             ></div>
           </div>
-          <p className="text-gray-400 text-sm">75% Complete</p>
+          <p className="text-gray-400 text-xs md:text-sm">75% Complete</p>
         </div>
       </div>
 
