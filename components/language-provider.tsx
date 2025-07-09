@@ -108,9 +108,9 @@ const translations = {
     creativeDesign: "Ստեղծագործական Դիզայն",
     creativeDesignDesc:
       "Նորարարական տեսողական լուծումներ, որոնք գրավում են ուշադրությունը և արդյունավետ հաղորդում են ձեր բրենդի հաղորդագրությունը:",
-    technicalExcellence: "Տեխնիկական Գերազանցություն",
+    technicalExcellence: "Տեխնիկական Ճշգրտություն",
     technicalExcellenceDesc:
-      "Առաջադեմ արտադրական և տեղադրման տեխնիկաներ, որոնք ապահովում են ամրություն և մասնագիտական ավարտ:",
+      "Առաջադեմ արտադրական և տեղադրման մեթոդներ, որոնք երաշխավորում են ամրություն և անթերի մասնագիտական արդյունք:",
     projectManagement: "Նախագծի Կառավարում",
     projectManagementDesc:
       "Պարզեցված գործընթացներ գաղափարից մինչև ավարտ՝ ապահովելով նախագծերի ժամանակին և բյուջեի շրջանակներում իրականացումը:",
@@ -170,6 +170,7 @@ const translations = {
 
     largeFormatPrinting: "Լայնաֆորմատ տպագրություն",
     digitalPrinting: "Թվային տպագրություն",
+    vinylGraphics: "Թվային տպագրություն",
     promotionalItems: "Գովազդային իրեր",
     signage: "Ցուցանակներ",
 
@@ -321,9 +322,9 @@ const translations = {
     creativeDesign: "Creative Design",
     creativeDesignDesc:
       "Innovative visual solutions that capture attention and communicate your brand message effectively.",
-    technicalExcellence: "Technical Excellence",
+    technicalExcellence: "Technical Precision",
     technicalExcellenceDesc:
-      "Advanced manufacturing and installation techniques ensuring durability and professional finish.",
+      "Advanced production and installation methods that guarantee durability and a flawless, professional result.",
     projectManagement: "Project Management",
     projectManagementDesc:
       "Streamlined processes from concept to completion, delivering projects on time and within budget.",
@@ -533,9 +534,9 @@ const translations = {
     creativeDesign: "Креативный Дизайн",
     creativeDesignDesc:
       "Инновационные визуальные решения, которые привлекают внимание и эффективно передают сообщение вашего бренда.",
-    technicalExcellence: "Техническое Совершенство",
+    technicalExcellence: "Техническая Точность",
     technicalExcellenceDesc:
-      "Передовые производственные и монтажные технологии, обеспечивающие долговечность и профессиональную отделку.",
+      "Современные методы производства и монтажа, которые гарантируют надёжность и безупречный профессиональный результат.",
     projectManagement: "Управление Проектами",
     projectManagementDesc:
       "Оптимизированные процессы от концепции до завершения, обеспечивающие выполнение проектов в срок и в рамках бюджета.",

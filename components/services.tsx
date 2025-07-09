@@ -78,7 +78,7 @@ export function Services() {
       features: [
         t("largeFormatPrinting"),
         t("digitalPrinting"),
-        t("vinylGraphics"),
+        //t("vinylGraphics"),
         t("promotionalItems"),
         t("signage"),
       ],
