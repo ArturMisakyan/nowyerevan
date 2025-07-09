@@ -383,13 +383,6 @@ const translations = {
     lightingSetup: "Lighting Setup",
     themedDecorations: "Themed Decorations",
 
-    retailDesign: "Дизайн розничной торговли",
-    restaurantInteriors: "Интерьеры ресторанов",
-    officeSpaces: "Офисные помещения",
-    showrooms: "Шоурумы",
-    brandEnvironments: "Брендовая среда",
-    furniture: "Мебель",
-
     retailDesign: "Retail Design",
     restaurantInteriors: "Restaurant Interiors",
     officeSpaces: "Office Spaces",
@@ -608,6 +601,13 @@ const translations = {
     backdropCreation: "Создание фона",
     lightingSetup: "Установка освещения",
     themedDecorations: "Тематические украшения",
+
+    retailDesign: "Дизайн розничной торговли",
+    restaurantInteriors: "Интерьеры ресторанов",
+    officeSpaces: "Офисные помещения",
+    showrooms: "Шоурумы",
+    brandEnvironments: "Брендовая среда",
+    furniture: "Мебель",
 
     interiorDesign: "Дизайн интерьера",
     exteriorDesign: "Дизайн экстерьера",
