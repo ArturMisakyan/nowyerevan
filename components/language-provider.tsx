@@ -163,6 +163,13 @@ const translations = {
     lightingSetup: "Լուսավորության տեղադրում",
     themedDecorations: "Թեմատիկ զարդարում",
 
+    retailDesign: "Մանրածախ դիզայն",
+    restaurantInteriors: "Ռեստորանի ինտերիեր",
+    officeSpaces: "Գրասենյակային տարածքներ",
+    showrooms: "Ցուցասրահներ",
+    brandEnvironments: "Բրենդային միջավայր",
+    furniture: "Կահույք",
+
     interiorDesign: "Ինտերիերի դիզայն",
     exteriorDesign: "Էքստերիերի դիզայն",
     commercialFurniture: "Կոմերցիոն կահույք",
@@ -375,6 +382,20 @@ const translations = {
     backdropCreation: "Backdrop Creation",
     lightingSetup: "Lighting Setup",
     themedDecorations: "Themed Decorations",
+
+    retailDesign: "Дизайн розничной торговли",
+    restaurantInteriors: "Интерьеры ресторанов",
+    officeSpaces: "Офисные помещения",
+    showrooms: "Шоурумы",
+    brandEnvironments: "Брендовая среда",
+    furniture: "Мебель",
+
+    retailDesign: "Retail Design",
+    restaurantInteriors: "Restaurant Interiors",
+    officeSpaces: "Office Spaces",
+    showrooms: "Showrooms",
+    brandEnvironments: "Brand Environments",
+    furniture: "Furniture",
 
     interiorDesign: "Interior Design",
     exteriorDesign: "Exterior Design",
