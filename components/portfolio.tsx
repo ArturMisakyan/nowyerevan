@@ -93,7 +93,11 @@ export function Portfolio() {
                   <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 right-2 md:right-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
                     <div className="flex flex-wrap gap-1 md:gap-2">
                       {item.tags.map((tag, tagIndex) => (
-                        <Badge key={tagIndex} variant="secondary" className="bg-white/90 text-slate-700 text-xs">
+                        <Badge
+                          key={tagIndex}
+                          variant="secondary"
+                          className="bg-white/90 text-slate-700 text-xs px-2 py-1 rounded-full"
+                        >
                           {tag}
                         </Badge>
                       ))}
@@ -104,7 +108,7 @@ export function Portfolio() {
                   <h3 className="text-sm md:text-lg lg:text-xl font-semibold text-slate-800 mb-1 md:mb-2 break-words hyphens-auto">
                     {item.title}
                   </h3>
-                  <p className="text-brand-orange font-medium text-xs md:text-sm lg:text-base break-words">
+                  <p className="text-brand-orange font-medium text-xs md:text-sm lg:text-base break-words mb-3 md:mb-4">
                     {item.category}
                   </p>
                 </CardContent>

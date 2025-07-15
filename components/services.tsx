@@ -115,7 +115,7 @@ export function Services() {
         </div>
 
         {/* Services Grid - Above the fold layout */}
-        <div className="services-grid">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 lg:gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
             <Card
               key={index}
@@ -143,11 +143,9 @@ export function Services() {
                 </ul>
                 <div className="mt-3 md:mt-4 lg:mt-6 pt-2 md:pt-3 lg:pt-4 border-t border-gray-100">
                   <Link href={service.link}>
-                    <button
-                      className={`flex items-center text-xs md:text-xs lg:text-sm font-medium ${service.color} hover:underline group-hover:text-brand-orange transition-colors`}
-                    >
-                      {t("learnMore")}
-                      <ExternalLink className="w-2.5 h-2.5 md:w-3 md:h-3 lg:w-4 lg:h-4 ml-1" />
+                    <button className="w-full bg-brand-orange hover:bg-brand-orange-hover text-white py-2 px-4 rounded-lg font-medium text-sm transition-colors duration-200 flex items-center justify-center gap-2">
+                      <span>{t("learnMore")}</span>
+                      <ExternalLink className="w-4 h-4" />
                     </button>
                   </Link>
                 </div>

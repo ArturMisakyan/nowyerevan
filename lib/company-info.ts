@@ -28,7 +28,7 @@ export const COMPANY_INFO = {
   },
 
   social: {
-    facebook: "https://www.facebook.com/profile.php?id=61574513597283",
+    facebook: "https://www.facebook.com/nowyerevan",
     instagram: "https://www.instagram.com/now.evn/",
     linkedin: "#", // Add when available
     youtube: "#", // Add when available

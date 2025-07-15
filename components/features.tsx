@@ -42,7 +42,6 @@ export function Features() {
             className="w-full h-full object-cover transform perspective-1000 rotateX-12"
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/20 to-transparent"></div>
       </div>
       <div className="container mx-auto relative z-10">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 lg:gap-8 max-w-6xl mx-auto">
