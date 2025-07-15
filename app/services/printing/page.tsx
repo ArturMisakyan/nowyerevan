@@ -35,7 +35,7 @@ function PrintingContent() {
   const services = [
     t("largeFormatPrinting"),
     t("digitalPrinting"),
-    t("vinylGraphics"),
+    //t("vinylGraphics"),
     t("promotionalItems"),
     t("signage"),
     t("banners"),

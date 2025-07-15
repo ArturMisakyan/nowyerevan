@@ -284,24 +284,23 @@ html {
 
 /* Hero section responsive design */
 #home {
-  min-height: 100vh;
   display: flex;
   align-items: center;
 }
 
 @media (max-width: 768px) {
   #home {
-    min-height: 100vh;
-    padding-top: 80px;
-    padding-bottom: 40px;
+    min-height: 80vh;
+    padding-top: 60px;
+    padding-bottom: 20px;
   }
 }
 
 @media (max-width: 480px) {
   #home {
-    min-height: 100vh;
-    padding-top: 60px;
-    padding-bottom: 30px;
+    min-height: 75vh;
+    padding-top: 50px;
+    padding-bottom: 15px;
   }
 }
 
@@ -341,22 +340,6 @@ html {
 
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
-}
-
-/* Service cards grid layout */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-@media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
 }
 
 /* Above the fold layout */

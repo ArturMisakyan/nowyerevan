@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /coming-soon
 
 # Sitemap
 Sitemap: https://nowyerevan.com/sitemap.xml

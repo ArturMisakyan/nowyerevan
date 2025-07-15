@@ -4,31 +4,31 @@ export const COMPANY_INFO = {
   slogan: "Make it happen NOW",
 
   contact: {
-    phone: "+374 43 454 102",
-    email: "nowyerevan@gmail.com",
+    phone: "+374 (33) 99 99 82",
+    email: "info@nowyerevan.am",
 
     // Addresses in different languages
     address: {
       en: {
         city: "Yerevan, Armenia",
-        street: "Tumanyan Street 15",
-        full: "Tumanyan Street 15, Yerevan, Armenia",
+        street: "64 Marshal Baghramyan",
+        full: "64 Marshal Baghramyan, Yerevan, Armenia",
       },
       hy: {
         city: "Երևան, Հայաստան",
-        street: "Թումանյան փողոց 15",
-        full: "Թումանյան փողոց 15, Երևան, Հայաստան",
+        street: "Մարշալ Բաղրամյան 64",
+        full: "Մարշալ Բաղրամյան 64, Երևան, Հայաստան",
       },
       ru: {
         city: "Ереван, Армения",
-        street: "Улица Туманяна 15",
-        full: "Улица Туманяна 15, Ереван, Армения",
+        street: "Маршала Баграмяна 64",
+        full: "Маршала Баграмяна 64, Ереван, Армения",
       },
     },
   },
 
   social: {
-    facebook: "https://www.facebook.com/profile.php?id=61574513597283",
+    facebook: "https://www.facebook.com/nowyerevan",
     instagram: "https://www.instagram.com/now.evn/",
     linkedin: "#", // Add when available
     youtube: "#", // Add when available
